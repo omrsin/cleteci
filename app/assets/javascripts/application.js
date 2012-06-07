@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-carousel
 //= require bootstrap-transition
+//= require bootstrap-dropdown
 //= require_tree .
 
 $(function(){	

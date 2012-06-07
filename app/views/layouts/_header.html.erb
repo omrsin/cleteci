@@ -5,9 +5,20 @@
 			<div class="container">
 				<nav>
 					<ul class="nav">
-						<li><%= link_to("Home", "#") %></li>
+						<li class="active"><%= link_to("Home", "#") %></li>
+						<li class="divider-vertical"></li>
 						<li><%= link_to("Nosotros", "#") %></li>
-						<li><%= link_to("Portafolio", "#") %></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">
+								Portafolio
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<%= link_to("Portafolio", "#") %>
+								<%= link_to("Servicios", "#") %>
+								<%= link_to("Capacitación", "#") %>
+							</ul>
+						</li>
 						<li><%= link_to("Tecnología", "#") %></li>
 						<li><%= link_to("Contáctanos", "#") %></li>
 						<li><%= link_to("Trabaja con Nosotros", "#") %></li>
