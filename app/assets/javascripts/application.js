@@ -15,6 +15,7 @@
 //= require bootstrap-carousel
 //= require bootstrap-transition
 //= require bootstrap-dropdown
+//= require bootstrap-collapse
 //= require_tree .
 
 $(function(){	
