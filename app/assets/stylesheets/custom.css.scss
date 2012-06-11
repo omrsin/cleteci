@@ -1,7 +1,33 @@
-$gridColumnWidth: 70px;
-
 @import "bootstrap";
 @import "bootstrap-responsive";
+
+/* Colors */
+$myDarkGray: #343434;
+
+$headerShadow: 0 2px 4px rgba(0, 0, 0, 0);
+$headerGray: $myDarkGray;
+
+/* Header */
+
+.header-top {
+	background-color: $headerGray;
+}
+
+.navbar-inner {
+	background-color: transparent;
+	background-image: none;
+	border-radius: 0px;
+	padding-right: 0px;
+	-moz-box-shadow: $headerShadow;
+  -webkit-box-shadow: $headerShadow;
+  box-shadow: $headerShadow;
+}
+
+.logo {
+	margin-top: 20px;
+}
+
+
 
 .slider-container {
 	position: absolute;
