@@ -11,6 +11,7 @@ $navBarGray: $myDarkGray;
 $navBarTextBlue: $myBlue;
 $carouselHeader: $myBlue;
 $breakPageOrange: $myOrange;
+$contactText: $myOrange;
 
 /* General */
 
@@ -20,6 +21,10 @@ body {
 
 [class*="span"]{
 	margin-left: 0px;
+}
+
+.clear-content {
+	clear: both;
 }
 
 
@@ -63,16 +68,63 @@ body {
 
 /* Footer */
 
-.navbar ul.nav-footer > li > a {
-	padding-left: 0px;
-	padding-right: 19px;
+footer {
+	min-height: 200px;
+}
+
+.navbar ul.nav-footer > li {
+	padding-left: 15px;
+	> a {
+		padding-left: 0px;
+		padding-right: 19px;
+		font-size: 18px;
+	}
 }
 
 ul.nav-footer {
 	ul{
 		list-style-type: none;
 		margin: 0px;
+		a {
+			color: $white;
+			text-decoration: none;
+			&:hover {
+				color: $navBarTextBlue;
+			}
+		}
 	}
+}
+
+.footer-contact {
+	color: $white;
+	margin-top: 15px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	h1{
+		color: $contactText;
+	}
+	p {
+		margin: 0px;
+	}
+	.contact-content {
+		margin-top: 15px;
+	}
+	.child-left {
+		float: left;
+		width: 33.33%;
+	}
+	.child-right {
+		float: right;
+		width: 66.66%;
+	}
+}
+
+.phone .child-left {
+	margin-top: 5px;
+}
+
+.mail div {
+	margin-top: 10px;
 }
 
 /* Carousel */
@@ -125,6 +177,13 @@ ul.nav-footer {
 	min-height: 370px;	
 	background-image: asset-url("fondo.png", image);
 	color: $white;
+	a {
+		color: $white;
+		&:hover {
+			color: $white;
+			text-decoration: none;
+		}
+	}
 	section article{
 		margin-top: 60px;
 		margin-left: 20px;

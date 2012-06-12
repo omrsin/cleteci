@@ -1,27 +1,77 @@
 <footer class="cross-bar">
 	<div class="container">
 	
-		<div class="navbar">
+		<div class="navbar span9">
 			<div class="navbar-inner">
-				<div class="container">
-					<nav>
-						<ul class="nav pull-left nav-footer">
-							<li>
-								<%= link_to("NOSOTROS", "#") %>
-								<ul>
-									<li><a>Equipo</a></li>
-									<li><a>Valores</a></li>
-								</ul>
-							</li>
-							<li><%= link_to("PORTAFOLIO", "#") %></li>
-							<li><%= link_to("TECNOLOGÍA", "#") %></li>
-							<li><%= link_to("CONTÁCTANOS", "#") %></li>
-							<li><%= link_to("EMPRENDE CON NOSOTROS", "#") %></li>
-						</ul>
-					<nav>
-				</div>
+				<nav>
+					<ul class="nav pull-left nav-footer">
+						<li>
+							<%= link_to("NOSOTROS", "#") %>
+							<ul>
+								<li><%= link_to("Equipo", "#") %></li>
+								<li><%= link_to("Valores", "#") %></li>
+							</ul>
+						</li>
+						<li>
+							<%= link_to("PORTAFOLIO", "#") %>
+							<ul>
+								<li><%= link_to("Desarrollo de Sofware", "#") %></li>
+								<li><%= link_to("Agile", "#") %></li>
+								<li><%= link_to("Infraestructura", "#") %></li>
+								<li><%= link_to("Consultoria", "#") %></li>
+							</ul>
+						</li>
+						<li>
+							<%= link_to("TECNOLOGÍA", "#") %>
+							<ul>
+								<li><%= link_to("Lorem", "#") %></li>
+								<li><%= link_to("Ipsum", "#") %></li>
+								<li><%= link_to("Dolor", "#") %></li>
+								<li><%= link_to("Sit amet", "#") %></li>
+							</ul>
+						</li>
+						<li>
+							<%= link_to("CONTÁCTANOS", "#") %>
+							<ul>
+								<li><%= link_to("Registro", "#") %></li>
+								<li><%= link_to("Buzón de Sugerencias", "#") %></li>
+							</ul>
+						</li>
+						<li>
+							<%= link_to("EMPRENDE CON NOSOTROS", "#") %>
+							<ul>
+								<li><%= link_to("Sube tu CV", "#") %></li>
+								<li><%= link_to("Postula tu Startup!", "#") %></li>
+							</ul>
+						</li>
+					</ul>
+				<nav>
 			</div>
 		</div>
+		
+		<section class="footer-contact pull-right">
+			<header>
+				<h1>CONTACTO</h1>
+			</header>
+			<div class="contact-content phone">
+				<div class="child-left">
+					<%= image_tag("cleteci-phone.png", alt: "Contacto") %>
+				</div>			
+				<div class="child-right">
+					<p>00-000-0000000</p>
+					<p>00-000-0000000</p>
+					<p>00-000-0000000</p>
+				</div>
+			</div>
+			<div class="clear-content mail">
+				<div class="child-left">
+					<%= image_tag("cleteci-mail.png", alt: "Correo") %>
+				</div>			
+				<div class="child-right">
+					<p>info@celteci.com</p>
+				</div>
+			</div>
+		</section>
 		
 	</div>
 </footer>
