@@ -3,31 +3,74 @@
 
 /* Colors */
 $myDarkGray: #343434;
+$myBlue: #0081bf;
+$myOrange: #f68c36;
 
 $headerShadow: 0 2px 4px rgba(0, 0, 0, 0);
-$headerGray: $myDarkGray;
+$navBarGray: $myDarkGray;
+$navBarTextBlue: $myBlue;
+$breakPageOrange: $myOrange;
 
 /* Header */
 
-.header-top {
-	background-color: $headerGray;
+.cross-bar {
+	background-color: $navBarGray;
 }
 
 .navbar-inner {
 	background-color: transparent;
 	background-image: none;
 	border-radius: 0px;
-	padding-right: 0px;
+	padding: 0px;
 	-moz-box-shadow: $headerShadow;
   -webkit-box-shadow: $headerShadow;
   box-shadow: $headerShadow;
 }
 
-.logo {
-	margin-top: 20px;
+.navbar {
+	margin: 0px;
+	.nav {
+		margin-top: 15px;
+		> li > a {
+			color: $white;
+			&:hover {
+				color: $navBarTextBlue;
+			}
+		}
+		.active a {
+			background-color: transparent;
+			color: $navBarTextBlue;
+			&:hover {
+				color: $navBarTextBlue;
+				background-color: transparent;
+			}
+		}
+	}
 }
 
 
+/* Footer */
+
+.navbar ul.nav-footer > li > a {
+	padding-left: 0px;
+	padding-right: 19px;
+}
+
+ul.nav-footer {
+	ul{
+		list-style-type: none;
+		margin: 0px;
+	}
+}
+
+/* General */
+
+[class*="span"]{
+	margin-left: 0px;
+}
+
+
+/* Carousel */
 
 .slider-container {
 	position: absolute;
@@ -45,4 +88,29 @@ $headerGray: $myDarkGray;
 	line-height: 40px;
 	font-size: 3.030303em;
 	padding: 20px;
+}
+
+.carousel {
+	margin-bottom: 0px;
+}
+
+
+/* Home */
+
+.break-page {
+	min-height: 10px;
+	background-color: $breakPageOrange;
+}
+
+.content-preview {
+	min-height: 370px;	
+	background-image: asset-url("fondo.png", image);
+	color: $white;
+	section article{
+		margin-top: 60px;
+		margin-left: 90px;
+		h1 {
+			font-size: 24px;
+		}
+	}
 }
