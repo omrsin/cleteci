@@ -9,7 +9,19 @@ $myOrange: #f68c36;
 $headerShadow: 0 2px 4px rgba(0, 0, 0, 0);
 $navBarGray: $myDarkGray;
 $navBarTextBlue: $myBlue;
+$carouselHeader: $myBlue;
 $breakPageOrange: $myOrange;
+
+/* General */
+
+body {
+	font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+[class*="span"]{
+	margin-left: 0px;
+}
+
 
 /* Header */
 
@@ -63,16 +75,9 @@ ul.nav-footer {
 	}
 }
 
-/* General */
-
-[class*="span"]{
-	margin-left: 0px;
-}
-
-
 /* Carousel */
 
-.slider-container {
+/*.slider-container {
 	position: absolute;
 	width: 30%;
 	left: 10%;
@@ -88,10 +93,24 @@ ul.nav-footer {
 	line-height: 40px;
 	font-size: 3.030303em;
 	padding: 20px;
-}
+}*/
 
 .carousel {
 	margin-bottom: 0px;
+	article {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		header {
+			h1 {
+				color: $carouselHeader; 
+			}
+		}
+		p {
+			margin-top: 10px;
+			color: $grayDark;
+			line-height: 25px;
+		}
+	}
 }
 
 
@@ -108,9 +127,23 @@ ul.nav-footer {
 	color: $white;
 	section article{
 		margin-top: 60px;
-		margin-left: 90px;
+		margin-left: 20px;
 		h1 {
 			font-size: 24px;
+		}
+	}
+	
+	.article-content {
+		margin-top: 15px;
+		p {
+			margin-left: 15px;
+			line-height: 22px;
+		}
+		.content-img-portfolio {
+			width: 100px;
+		}
+		.content-portfolio {
+			width: 250px;
 		}
 	}
 }

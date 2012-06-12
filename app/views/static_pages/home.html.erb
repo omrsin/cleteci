@@ -1,55 +1,46 @@
-<section class="container">
-	<div class="span12">
-		<div id="myCarousel" class="carousel slide">
-			<!-- Carousel items -->
-			<div class="carousel-inner">
-				<div class="active item">
-					<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ItalianMarketPhiladelphia.jpg/1170px-ItalianMarketPhiladelphia.jpg"></img>
-					<div class="slider-container">
-						Esto es una calle.
-					</div>
-				</div>
-				<div class="item">
-					<img src="http://ormigadesign.files.wordpress.com/2010/08/lagraciosa.jpg"></img>
-					<div class="slider-container">
-						Ay qué lindo mar!
-					</div>
-				</div>
-				<div class="item">
-					<img src="http://static.panoramio.com/photos/original/2989160.jpg"></img>
-					<div class="slider-container">
-						Castillo de Worchestershire por ahí por Glasgow.
-					</div>
-				</div>
-			</div>
-			<!-- Carousel nav -->
-			<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-		</div>
-	</div>
-</section>
+<%= render 'static_pages/carousel' %>
+
 <div class="row break-page"></div>
 <div class="content-preview">
 	<section class="container">
-		<article class="span3 margin1">
+		<article class="span4 margin1">
 			<header>
 				<h1>Nosotros</h1>
-				<p>Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit</p>
 			</header>
+			<div class="article-content">
+				<div class="span1">
+					<%= image_tag("cleteci-nosotros.png", alt: "Nosotros") %>
+				</div>
+				<div class="span3">
+					<p>Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit</p>
+				</div>
+			</div>			
 		</article>
 		
-		<article class="span3 margin1">
+		<article class="span4 margin1">
 			<header>
 				<h1>Portafolio de Servicios</h1>
-				<p>Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit</p>
 			</header>
+			<div class="article-content">
+				<div class="span1 content-img-portfolio">
+					<%= image_tag("cleteci-carpetas.png", alt: "Portafolio de Servicios") %>
+				</div>
+				<div class="span3 content-portfolio">
+					<p>Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit</p>
+				</div>
 		</article>
 		
-		<article class="span3 margin1">
+		<article class="span4 margin1">
 			<header>
 				<h1>Tecnología</h1>
-				<p>Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit</p>
 			</header>
+			<div class="article-content">
+				<div class="span1">
+					<%= image_tag("cleteci-logo-small.png", alt: "Tecnología") %>
+				</div>
+				<div class="span3">
+					<p>Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit</p>
+				</div>
 		</article>
 		
 		</article>
