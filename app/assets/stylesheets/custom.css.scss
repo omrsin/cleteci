@@ -7,10 +7,10 @@ $myBlue: #0081bf;
 $myOrange: #f68c36;
 
 $headerShadow: 0 2px 4px rgba(0, 0, 0, 0);
-$navBarGray: $myDarkGray;
-$navBarTextBlue: $myBlue;
+$navBarBackground: $myDarkGray;
+$navBarText: $myOrange;
 $carouselHeader: $myBlue;
-$breakPageOrange: $myOrange;
+$breakPageBackground: $myOrange;
 $contactText: $myOrange;
 
 /* General */
@@ -31,7 +31,7 @@ body {
 /* Header */
 
 .cross-bar {
-	background-color: $navBarGray;
+	background-color: $navBarBackground;
 }
 
 .navbar-inner {
@@ -51,14 +51,14 @@ body {
 		> li > a {
 			color: $white;
 			&:hover {
-				color: $navBarTextBlue;
+				color: $navBarText;
 			}
 		}
 		.active a {
 			background-color: transparent;
-			color: $navBarTextBlue;
+			color: $navBarText;
 			&:hover {
-				color: $navBarTextBlue;
+				color: $navBarText;
 				background-color: transparent;
 			}
 		}
@@ -89,7 +89,7 @@ ul.nav-footer {
 			color: $white;
 			text-decoration: none;
 			&:hover {
-				color: $navBarTextBlue;
+				color: $navBarText;
 			}
 		}
 	}
@@ -170,7 +170,7 @@ ul.nav-footer {
 
 .break-page {
 	min-height: 10px;
-	background-color: $breakPageOrange;
+	background-color: $breakPageBackground;
 }
 
 .content-preview {
