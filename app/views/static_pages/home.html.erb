@@ -3,51 +3,10 @@
 <div class="row break-page"></div>
 <div class="content-preview">
 	<section class="container">
-		<%= link_to "#" do %>
-			<article class="span4 margin1">
-				<header>
-					<h1>Nosotros</h1>
-				</header>
-				<div class="article-content">
-					<div class="span1">
-						<%= image_tag("cleteci-nosotros.png", alt: "Nosotros") %>
-					</div>
-					<div class="span3">
-						<p>Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit</p>
-					</div>
-				</div>			
-			</article>
-		<% end %>
-		
-		<%= link_to "#" do %>
-			<article class="span4 margin1">
-				<header>
-					<h1>Portafolio de Servicios</h1>
-				</header>
-				<div class="article-content">
-					<div class="span1 content-img-portfolio">
-						<%= image_tag("cleteci-carpetas.png", alt: "Portafolio de Servicios") %>
-					</div>
-					<div class="span3 content-portfolio">
-						<p>Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit</p>
-					</div>
-			</article>
-		<% end %>
-		
-		<%= link_to "#" do %>
-			<article class="span4 margin1">
-				<header>
-					<h1>Tecnología</h1>
-				</header>
-				<div class="article-content">
-					<div class="span1">
-						<%= image_tag("cleteci-logo-small.png", alt: "Tecnología") %>
-					</div>
-					<div class="span3">
-						<p>Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit</p>
-					</div>
-			</article>
-		<% end %>
-		
+	
+		<%= content_box("#","Nosotros", "", "cleteci-nosotros.png", "", "Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit") %>
+		<%= content_box("#","Portafolio de Servicios", "content-img-portfolio", "cleteci-carpetas.png", "content-portfolio", "Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit") %>	
+		<%= content_box("#","Tecnología", "", "cleteci-logo-small.png", "", "Fusce volutpat interdum diam ut accumsan. Phasellus vel tellus placerat libero tempor vestibulum. Mauris volutpat tincidunt nulla, vel scelerisque magna accumsan id. Vestibulum non erat eget libero semper sagittis. Mauris ipsum purus, interdum sit amet ornare eget, blandit sit amet erat. In nec enim sem, sed gravida elit") %>			
+				
 	</section>
 </div>
