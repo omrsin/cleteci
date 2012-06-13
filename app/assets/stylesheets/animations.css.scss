@@ -1,0 +1,39 @@
+/* Phone animation */
+
+/* Mixins */
+@mixin phone-animation-keyframes {
+	25%  {@include phone-keyframe-2;}
+	50%  {@include phone-keyframe-1;}
+	75%  {@include phone-keyframe-2;}
+	100% {@include phone-keyframe-1;}
+}
+
+@mixin phone-keyframe-1 {
+	tranform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+}
+
+@mixin phone-keyframe-2 {
+	tranform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+}
+
+.phone div:first-child:hover {
+	animation: phone-animation 2s infinite linear;
+	-moz-animation: phone-animation 2s infinite linear;
+	-webkit-animation: phone-animation 0.3s infinite linear;
+}
+
+@keyframes phone-animation {
+	@include phone-animation-keyframes;
+}
+
+@-moz-keyframes phone-animation {
+	@include phone-animation-keyframes;
+}
+
+@-webkit-keyframes phone-animation {
+	@include phone-animation-keyframes;
+}
