@@ -68,6 +68,24 @@ body {
 
 /* Footer */
 
+.footer-break-page {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	bottom: 0%;
+	td {
+		width: 50%;
+		&:first-child {
+			background-color: $navBarGray;;
+		}
+		&:last-child {
+			background-image: asset-url("cleteci-curve.png", image);
+			background-repeat: no-repeat;
+			image-rendering: -webkit-optimize-contrast;
+		}
+	}
+}
+
 footer {
 	min-height: 200px;
 }
@@ -177,6 +195,7 @@ ul.nav-footer {
 	min-height: 370px;	
 	background-image: asset-url("fondo.png", image);
 	color: $white;
+	position: relative;
 	a {
 		color: $white;
 		&:hover {
