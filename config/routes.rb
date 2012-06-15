@@ -1,5 +1,12 @@
 Cleteci::Application.routes.draw do
+  resources :contacts
+  
+	scope("/admin", path_names: { new: "nuevo", edit: "editar" }) do
+	  resources :users, path: "usuarios"
+	end
+  
   root to: 'static_pages#home'
+  match '/contacto', to: "contacts#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
