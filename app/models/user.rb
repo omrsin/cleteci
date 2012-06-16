@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   has_secure_password
   
 	before_save { |user| user.username = username.downcase }
+	before_save :create_remember_token
   
   VALID_USERNAME_REGEXP = /\A[\w+\-.]*\z/i
   VALID_PASSWORD_REGEXP = /^(?=.*\d)(?=.*([a-z]|[A-Z]))([\x20-\x7E]){6,}$/
@@ -29,4 +30,10 @@ class User < ActiveRecord::Base
   										 format: { with: VALID_PASSWORD_REGEXP,
   										 					 message: "es inválida (debe incluir letras y números" }
   validates :password_confirmation, presence: true
+  
+  private
+  	
+  	def create_remember_token
+  		self.remember_token = SecureRandom.urlsafe_base64
+  	end
 end

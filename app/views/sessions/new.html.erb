@@ -1,0 +1,22 @@
+<% provide(:title, "Administrador") %>
+<div class="container">	
+	<div class="offset3">
+		<div class="span6">
+		
+			<header>
+				<h1>Módulo de Administración</h1>
+			</header>
+		
+			<%= form_for(:session, url: sessions_path) do |f| %>
+
+		    <%= f.label :username, "Usuario" %>
+		    <%= f.text_field :username %>
+
+		    <%= f.label :password, "Contraseña" %>
+		    <%= f.password_field :password %>
+
+		    <%= f.submit "Iniciar Sesión", class: "btn btn-large btn-primary" %>
+		  <% end %>
+		</div>
+	</div>		
+</div>
