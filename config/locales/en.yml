@@ -2,4 +2,30 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      blank: no puede estar en blanco
+      confirmation: no coincide con la confirmación
+      invalid: es inválido
+      taken: ya existe
+      too_long:
+        one: es demasiado largo (máximo 1 caracter)
+        other: "es demasiado largo (máximo %{count} caracteres)"
+      too_short:
+        one: es demasiado corto (mínimo 1 caracter)
+        other: "es demasiado corto (mínimo %{count} caracteres)"
+      template:
+      body: ! 'Revise que los siguientes campos sean válidos:'
+      header:
+        one: ! '%{model} no pudo guardarse debido a 1 error'
+        other: ! '%{model} no pudo guardarse debido a %{count} errores'
+  activerecord:
+    errors:
+      <<: *errors
+    attributes:
+      user:
+        username: Usuario
+        password: Contraseña
+        password_confirmation: Confirmación de la contraseña
+        password_digest: Contraseña

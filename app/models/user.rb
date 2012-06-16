@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # == Schema Information
 #
 # Table name: users
@@ -21,8 +23,10 @@ class User < ActiveRecord::Base
   										 length: { within: (6..30) }, 
   										 format: { with: VALID_USERNAME_REGEXP },
   										 uniqueness: { case_sensitive: false } 
-  validates :password, presence: true, 
-  										 length: { within: (6..30) }, 
-  										 format: { with: VALID_PASSWORD_REGEXP }
+  validates :password, length: { within: (6..30), 
+  															 too_long: "es demasiado larga (máximo %{count} caracteres)",
+  															 too_short: "es demasiado corta (mínimo %{count} caracteres)"  }, 
+  										 format: { with: VALID_PASSWORD_REGEXP,
+  										 					 message: "es inválida (debe incluir letras y números" }
   validates :password_confirmation, presence: true
 end
