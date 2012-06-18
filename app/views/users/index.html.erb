@@ -29,7 +29,12 @@
 		<ul>
 			<% @users.each do |user| %>
 				<li>
-				  <p><%= link_to user.username, edit_user_path(user) %></p>
+				  <%= link_to user.username, edit_user_path(user) %>
+				  <% if user!=current_user %>
+						<div class="pull-right">
+							<%= link_to "Eliminar", user, id: "#{user.username}_delete", method: :delete, data: { confirm: "¿Estás seguro que deseas eliminar este usuario?" } %>
+						</div>
+					<% end %>
 				</li>
 			<% end %>
 		</ul>

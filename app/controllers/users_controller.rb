@@ -44,6 +44,12 @@ class UsersController < ApplicationController
   	end
   end
   
+  def destroy
+  	User.find(params[:id]).destroy
+  	flash[:success] = "Buuuuuu! Eliminaste a un usuario!"
+  	redirect_to users_path
+  end
+  
   private
 
     def logged_in_user

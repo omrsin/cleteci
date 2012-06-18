@@ -15,6 +15,7 @@ describe "User Pages" do
   	
   	it { should have_selector('title', text: "CLETECI | Administrador") }
   	it { should have_selector('h1', text: "Usuarios") }
+  	it { should_not have_link("Eliminar", href: user_path(user)) }
   	
   	describe "new user sign up" do
   		let(:submit) { "Crear Usuario" }
@@ -37,6 +38,26 @@ describe "User Pages" do
   			end
   		end
   	end
+  	
+  	describe "delete links" do
+			let(:another_user) { FactoryGirl.create(:user) }
+			before do
+				click_link "SALIR"
+				login(another_user)
+				visit users_path
+			end
+			
+			it { should have_link("Eliminar", href: user_path(user)) }
+			
+			it "should be able to delete another user" do
+				expect { click_link("Eliminar") }.to change(User, :count).by(-1)
+			end
+			
+			describe "Removing links" do
+				before { click_link("Eliminar") }
+				it { should_not have_link("Eliminar", href: user_path(user)) }				
+			end
+		end
   end
   
   describe "edit" do
