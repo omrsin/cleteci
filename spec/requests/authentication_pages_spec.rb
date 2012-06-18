@@ -24,20 +24,26 @@ describe "Authentication" do
   	
   	describe "login with valid information" do
   		let(:user) { FactoryGirl.create(:user) }
-  		before do
-  			fill_in "Usuario", with: user.username
-  			fill_in "Contraseña", with: user.password
-  			click_button "Iniciar Sesión"
-  		end
+  		before { login(user) } 
   		
-  		it { should_not have_link('USUARIOS', href: logout_path) }
+  		it { should have_link('USUARIOS', href: users_path) }
   		it { should have_link('SALIR', href: logout_path) }
+  		it { should have_link(user.username, href: edit_user_path(user)) }
   		
   		describe "followed by logout" do
   			before { click_link "SALIR" }
   			it { should_not have_link('USUARIOS', href: logout_path) }
   			it { should_not have_link('SALIR', href: logout_path) }
   		end
+  	end
+  end
+  
+  describe "authorization" do
+  	let(:user) { FactoryGirl.create(:user) }
+  	
+  	describe "in the Users controller" do
+  		before { put user_path(user) }
+  		specify { response.should redirect_to(root_path) }
   	end
   end
 end

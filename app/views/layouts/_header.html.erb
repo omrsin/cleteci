@@ -21,10 +21,7 @@
 						<li><%= link_to("EMPRENDE CON NOSOTROS", "#") %></li>
 						<% if logged_in? %>
 							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown">
-									ADMINISTRACIÓN
-									<b class="caret"></b>
-								</a>
+								<a class="dropdown-toggle" data-toggle="dropdown">ADMINISTRACIÓN<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<%= link_to("USUARIOS", users_path) %>
 									<%= link_to("SALIR", logout_path, method: "delete") %>									

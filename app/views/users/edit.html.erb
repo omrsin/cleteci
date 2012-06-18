@@ -1,0 +1,27 @@
+<% provide(:title, 'Administrador') %>
+
+<div class="container">	
+  <div class="offset3">
+  	<div class="span6">
+  		<header>
+  			<h1>Modificar Usuario</h1>
+  		</header>
+  		
+			<%= form_for(@user) do |f| %>
+				  <%= render 'shared/error_messages' %>
+
+				  <%= f.label :username, "Usuario" %>
+				  <%= f.text_field :username %>
+
+				  <%= f.label :password, "Contraseña" %>
+				  <%= f.password_field :password %>
+
+				  <%= f.label :password_confirmation, "Confirme la contraseña" %>
+				  <%= f.password_field :password_confirmation %>
+
+				  <%= f.submit "Salvar Cambios", class: "btn btn-large btn-primary" %>
+				<% end %>
+
+			</div>
+  </div>
+</div>

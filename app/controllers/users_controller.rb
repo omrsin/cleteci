@@ -1,4 +1,8 @@
+# encoding: utf-8
+
 class UsersController < ApplicationController
+	before_filter :logged_in_user
+
   def new
   end
   
@@ -21,4 +25,28 @@ class UsersController < ApplicationController
     	render 'index'
     end
   end
+  
+  def edit
+  	@user = User.find(params[:id])
+  end
+  
+  def update
+  	@user = User.find(params[:id])
+  	if (@user==current_user) && @user.update_attributes(params[:user])
+  		flash[:success] = "Yawiiiii!!!! Usuario modificado!"
+  		login(@user)
+  		redirect_to users_path
+  	elsif (@user!=current_user) && @user.update_attributes(params[:user])
+  		flash[:success] = "Yawiiiii!!!! Usuario modificado!"
+  		redirect_to users_path
+  	else
+  		render 'edit'
+  	end
+  end
+  
+  private
+
+    def logged_in_user
+      redirect_to root_path, notice: "Dirección inválida" unless logged_in?
+    end
 end

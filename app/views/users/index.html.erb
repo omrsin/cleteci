@@ -29,7 +29,7 @@
 		<ul>
 			<% @users.each do |user| %>
 				<li>
-				  <p><%= user.username %></p>
+				  <p><%= link_to user.username, edit_user_path(user) %></p>
 				</li>
 			<% end %>
 		</ul>
