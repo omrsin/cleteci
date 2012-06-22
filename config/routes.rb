@@ -1,8 +1,9 @@
 Cleteci::Application.routes.draw do
-  resources :contacts
-  
+    
 	scope("/admin", path_names: { new: "nuevo", edit: "editar" }) do
 	  resources :users, path: "usuarios"
+	  resources :contacts, path: "contactos"
+	  resources :appointments, path: "citas"
 	end
 	
 	resources :sessions, only: [:new, :create, :destroy]
@@ -10,7 +11,6 @@ Cleteci::Application.routes.draw do
 	root to: 'static_pages#home'
   match '/admin', to:  "sessions#new"
   match '/logout', to:  "sessions#destroy", via: :delete
-  match '/contacto', to: "contacts#new"
   
 
   # The priority is based upon order of creation:

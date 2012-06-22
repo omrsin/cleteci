@@ -1,0 +1,33 @@
+<% provide(:title, 'Administrador') %>
+
+<div class="container">
+
+	<div class="span12">
+		<h1>Citas</h1>
+
+		<ul>
+			<% @appointments.each do |appointment| %>
+				<li>					
+					<div class="span2">
+						<%= link_to "#{appointment.contact.name} #{appointment.contact.lastname}", 
+											contact_path(appointment.contact) %>
+					</div>					
+					<div class="span5">
+						<%= appointment.topic %>
+					</div>
+					<div class="span2">
+						<%= appointment.date %>
+					</div>
+					<div class="span2">
+						<%= appointment.time %>
+					</div>
+					<div class="span1">
+						<%= appointment.via.capitalize %>
+					</div>
+				</li>
+				<div class="clear-content"></div>
+			<% end %>
+		</ul>
+	</div>
+
+</div>

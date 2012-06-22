@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  before_filter :logged_in_user
+  
   def new
   end
   

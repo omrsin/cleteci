@@ -25,7 +25,12 @@ en:
       <<: *errors
     attributes:
       user:
-        username: Usuario
         password: Contraseña
         password_confirmation: Confirmación de la contraseña
         password_digest: Contraseña
+        username: Usuario        
+      appointment:
+        date: Fecha
+        time: Hora
+        topic: Tópico
+        via: Vía

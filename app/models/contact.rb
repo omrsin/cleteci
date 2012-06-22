@@ -15,6 +15,7 @@
 
 class Contact < ActiveRecord::Base
   attr_accessible :email, :lastname, :name, :phone, :skypeid, :wish_info
+  has_many :appointments
   
   before_save { |contact| contact.email = email.downcase }
   before_save { |contact| contact.skypeid = skypeid.downcase }

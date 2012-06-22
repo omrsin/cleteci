@@ -17,16 +17,10 @@
 						<li><%= link_to("NOSOTROS", "#") %></li>
 						<li><%= link_to("PORTAFOLIO", "#") %></li>						
 						<li><%= link_to("TECNOLOGÍA", "#") %></li>
-						<li><%= link_to("CONTÁCTANOS", contacto_path) %></li>
+						<li><%= link_to("CONTÁCTANOS", contacts_path) %></li>
 						<li><%= link_to("EMPRENDE CON NOSOTROS", "#") %></li>
 						<% if logged_in? %>
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown">ADMINISTRACIÓN<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<%= link_to("USUARIOS", users_path) %>
-									<%= link_to("SALIR", logout_path, method: "delete") %>									
-								</ul>
-							</li>
+							<%= render 'layouts/admin' %>
 						<% end %>
 					</ul>
 				</nav>

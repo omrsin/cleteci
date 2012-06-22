@@ -48,11 +48,6 @@ class UsersController < ApplicationController
   	User.find(params[:id]).destroy
   	flash[:success] = "Buuuuuu! Eliminaste a un usuario!"
   	redirect_to users_path
-  end
+  end  
   
-  private
-
-    def logged_in_user
-      redirect_to root_path, notice: "Dirección inválida" unless logged_in?
-    end
 end

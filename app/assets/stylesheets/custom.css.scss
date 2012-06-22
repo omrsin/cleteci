@@ -34,6 +34,14 @@ body {
 	clear: both;
 }
 
+ul {
+	list-style: none;
+}
+
+li {
+	margin-top: 10px;
+}
+
 
 /* Header */
 
@@ -242,7 +250,7 @@ input, textarea, select, .uneditable-input {
  /* **************************************************************************
  Media Queries
  ************************************************************************** */
-@media screen and (max-width: 480px) {
+@media touchscreen and (max-width: 480px) {
 	.carousel-control {
 		visibility: hidden;
 	}

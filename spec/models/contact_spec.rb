@@ -33,6 +33,7 @@ describe Contact do
   it { should respond_to(:skypeid) }
   it { should respond_to(:phone) }
   it { should respond_to(:wish_info) }
+  it { should respond_to(:appointments) }
   
   it { should be_valid }
   
@@ -178,4 +179,13 @@ describe Contact do
 		end
   end
   
+  describe "appointments associations" do
+  	before { @contact.save }
+  	let!(:older_appointment) { FactoryGirl.create(:appointment, contact: @contact, created_at: 1.day.ago) }
+  	let!(:newer_appointment) { FactoryGirl.create(:appointment, contact: @contact, created_at: 1.hour.ago) }
+  
+		it "should have the right appointments in the right order" do
+			@contact.appointments.should == [newer_appointment, older_appointment]
+		end    
+  end   
 end
