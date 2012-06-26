@@ -1,12 +1,39 @@
 <div class="container">
 
-	<h1>
-		<%= @contact.name %> <%= @contact.lastname %>
-	</h1>
-	<p><%= @contact.email %></p>
-	<p><%= @contact.skypeid %></p>
-	<p><%= @contact.phone %></p>
-	<p><%= @contact.wish_info %></p>
-
+	<div class="span4">
+		<h1>
+			<%= @contact.name %> <%= @contact.lastname %>
+		</h1>
+		<p><strong>Correo:</strong> <%= @contact.email %></p>
+		<p><strong>SkypeID:</strong> <%= @contact.skypeid %></p>
+		<p><strong>Teléfono:</strong> <%= @contact.phone %></p>
+		<% if @contact.wish_info %>
+			<p>Desea recibir información</p>
+		<% else %>
+			<p>No desea recibir información</p>
+		<% end %>
+	</div>
+	
+	<div class="span8">
+		<h1 class="span8">Citas</h1>
+		<ul>
+			<% @contact.appointments.each do |appointment| %>
+				<li>
+					<div class="span4">
+						<%= appointment.topic %>
+					</div>
+					<div class="span1">
+						<%= appointment.date %>
+					</div>
+					<div class="span2">	
+						<%= appointment.time %>
+					</div>
+					<div class="span1">
+						<%= appointment.via.capitalize %>
+					</div>
+				</li>
+			<% end %>
+		</ul>
+	</div>
 </div>
 
