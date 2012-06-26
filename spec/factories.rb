@@ -7,9 +7,9 @@ FactoryGirl.define do
   
   factory :contact do
   	name "Example"
-  	lastname "Contact"
-  	email "example@contact.com"
-  	skypeid "example.contact"
+  	sequence(:lastname) { |n| "Contact#{n}" }
+  	sequence(:email) { |n| "example#{n}@contact.com" }
+  	sequence(:skypeid) { |n| "example#{n}.contact" }
   	phone "01234567890"
   	wish_info true
   end

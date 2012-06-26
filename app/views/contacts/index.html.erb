@@ -1,0 +1,33 @@
+<% provide(:title, 'Administrador') %>
+
+<div class="container">
+
+	<div class="span12">
+		<h1>Contactos</h1>
+		<span> 
+			Número de contactos: <%= @contacts_count %>
+		</span>
+		<ul>
+			<% @contacts.each do |contact| %>
+				<li>					
+					<div class="span3">
+						<%= link_to "#{contact.name} #{contact.lastname}", 
+												contact_path(contact) %>
+					</div>					
+					<div class="span3">
+						<%= contact.email %>
+					</div>
+					<div class="span3">
+						<%= contact.skypeid %>
+					</div>
+					<div class="span3">
+						<%= contact.phone %>
+					</div>
+				</li>
+				<div class="clear-content"></div>
+			<% end %>
+		</ul>
+		<%= will_paginate %>
+	</div>
+	
+</div>

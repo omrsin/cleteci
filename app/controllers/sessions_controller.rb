@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 		user = User.find_by_username(params[:session][:username])
 		if user && user.authenticate(params[:session][:password])
 		  login user
-		  redirect_to users_path
+		  redirect_to appointments_path
 		else
 		  flash.now[:error] = 'Usuario/Contraseña inválidos'
       render 'new'

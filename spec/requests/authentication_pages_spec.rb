@@ -26,13 +26,15 @@ describe "Authentication" do
   		let(:user) { FactoryGirl.create(:user) }
   		before { login(user) } 
   		
-  		it { should have_link('USUARIOS', href: users_path) }
+			it { should have_link('CONTACTOS', href: contacts_path) }	 		
   		it { should have_link('CITAS', href: appointments_path ) }
+  		it { should have_link('USUARIOS', href: users_path) }
   		it { should have_link('SALIR', href: logout_path) }
   		it { should have_link(user.username, href: edit_user_path(user)) }
   		
   		describe "followed by logout" do
   			before { click_link "SALIR" }
+  			it { should_not have_link('CONTACTOS', href: contacts_path) }
   			it { should_not have_link('USUARIOS', href: logout_path) }
   			it { should_not have_link('CITAS', href: appointments_path ) }
   			it { should_not have_link('SALIR', href: logout_path) }

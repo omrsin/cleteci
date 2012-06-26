@@ -7,6 +7,11 @@ describe "Appointment Pages" do
 	subject { page }
 
 	describe "index" do
+		after(:all) do
+   		Appointment.delete_all
+   		Contact.delete_all   		
+  	end
+	
 		let(:user) { FactoryGirl.create(:user) }
 		let(:contact) { FactoryGirl.create(:contact) }
 		let(:appointment) { FactoryGirl.create(:appointment, contact: contact) }
