@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module StaticPagesHelper
 	
 	def content_box(url, name, imgClass, img, contentClass, text)
@@ -25,5 +27,5 @@ module StaticPagesHelper
 			end
 		end
 	end
-
+	
 end

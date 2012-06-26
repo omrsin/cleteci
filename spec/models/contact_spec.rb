@@ -171,13 +171,6 @@ describe Contact do
 			end
 		end
   end
-
-	describe "when wish_info" do
-		describe "is not present" do
-			before { @contact.wish_info = nil }
-			it { should_not be_valid }
-		end
-  end
   
   describe "appointments associations" do
   	before { @contact.save }

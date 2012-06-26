@@ -24,6 +24,6 @@ describe "Appointment Pages" do
   	it { should have_content(appointment.date) }
   	it { should have_content(appointment.time) }
   	it { should have_content(appointment.via) }
-  	it { should have_content(contact.appointments.count) }  	
+  	it { should have_content("Número de citas: #{Appointment.count}") }  	
   end
 end

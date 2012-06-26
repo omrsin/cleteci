@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # == Schema Information
 #
 # Table name: contacts
@@ -27,7 +29,13 @@ class Contact < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 25 }
   validates :lastname, presence: true, length: { maximum: 25 }
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
-  validates :skypeid, length: { within: 6..32 }, allow_nil: true, format: { with: VALID_SKYPEID_REGEX }
-  validates :phone, length: { is: 11}, allow_nil: true, format: { with: VALID_PHONE_REGEX }
-  validates :wish_info, presence: true
+  validates :skypeid, length: { within: 6..32,
+  															too_long: "es demasiado largo (máximo %{count} caracteres)",
+  															too_short: "es demasiado corto (mínimo %{count} caracteres)" }, 
+  								    allow_nil: true, 
+  								    format: { with: VALID_SKYPEID_REGEX }
+  validates :phone, length: { is: 11, 
+ 															wrong_length: "debe tener %{count} dígitos" }, 
+  									allow_nil: true, 
+  									format: { with: VALID_PHONE_REGEX }
 end

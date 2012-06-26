@@ -48,11 +48,6 @@ describe "Authentication" do
   		before { put user_path(user) }
   		specify { response.should redirect_to(root_path) }
   	end
-  	
-  	describe "in the Appointments controller" do
-  		before { put appointment_path(appointment) }
-  		specify { response.should redirect_to(root_path) }
-  	end
   end
   
   describe "without logging in" do

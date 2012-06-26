@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
   															 too_long: "es demasiado larga (máximo %{count} caracteres)",
   															 too_short: "es demasiado corta (mínimo %{count} caracteres)"  }, 
   										 format: { with: VALID_PASSWORD_REGEXP,
-  										 					 message: "es inválida (debe incluir letras y números" }
+  										 					 message: "es inválida (debe incluir letras y números)" }
   validates :password_confirmation, presence: true
   
   private

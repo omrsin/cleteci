@@ -13,8 +13,9 @@
 #
 
 class Appointment < ActiveRecord::Base
-  attr_accessible :date, :time, :topic, :via
+  attr_accessible :date, :time, :topic, :via, :contact_attributes
   belongs_to :contact
+  accepts_nested_attributes_for :contact
   
   validates :contact_id, presence: true
   validates :date, presence: true

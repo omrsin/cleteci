@@ -1,0 +1,60 @@
+<% provide(:title, 'Contáctanos') %>
+
+<div class="container">
+	<section>
+		<h1>Contáctanos!</h1>
+	
+		<%= form_for @appointment, url: create_contact_path do |f| %>				
+			<% @appointment.errors.delete(:contact_id) %>
+			
+			<%= render 'shared/error_messages', object: f.object %>
+	    
+	    <div class="span4">
+				<%= fields_for :contact, @appointment.contact do |contact_f| %>
+					<%= contact_f.label :name, "Nombre" %>
+					<%= contact_f.text_field :name %>
+			
+					<%= contact_f.label :lastname, "Apellido" %>
+					<%= contact_f.text_field :lastname %>
+				
+					<%= contact_f.label :email, "Correo" %>
+					<%= contact_f.text_field :email %>
+				
+					<%= contact_f.label :skypeid, "SkypeID" %>
+					<%= contact_f.text_field :skypeid %>
+				
+					<%= contact_f.label :phone, "Teléfono" %>
+					<%= contact_f.text_field :phone %>
+				
+					<%= contact_f.label :wish_info, "¿Desea recibir información?" %>
+					<%= contact_f.check_box :wish_info, checked: true  %>
+				<% end %>
+			</div>
+			
+			<div class="span6">
+				<div class="offset1">
+					<%= f.label :topic, "Tópico" %>
+					<%= f.text_field :topic %> 
+				
+					<%= f.label :date, "Fecha" %>
+					<%= f.date_select :date %>
+				
+					<%= f.label :time, "Hora" %>
+					<%= f.select :time, options_for_select([["Entre 8 AM y 12 PM"], 
+																									["Entre 12 PM y 2 PM"],
+																									["Entre 2 PM y 6PM"],
+																									["Después de las 6PM"]]) %>
+				
+					<div style="width: 100%;">
+						<%= f.label :via, "Por medio de:" %>
+						<%= f.radio_button :via, "Correo", checked: true %>Correo
+						<%= f.radio_button :via, "Skype" %>Skype
+						<%= f.radio_button :via, "Teléfono" %>Teléfono
+					</div>
+
+					<%= f.submit "Enviar", class: "btn btn-large btn-primary" %>
+				<% end %>
+			</div>
+		</div>
+	</section>	
+</div>

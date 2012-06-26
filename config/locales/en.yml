@@ -34,3 +34,10 @@ en:
         time: Hora
         topic: Tópico
         via: Vía
+      contact:
+        name: Nombre
+        lastname: Apellido
+        email: Correo
+        skypeid: SkypeID
+        phone: Teléfono
+        wish_info: Desea Información
