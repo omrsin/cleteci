@@ -1,31 +1,27 @@
 <header class="cross-bar">
-	<div class="container">
-				
-		<!-- Navigation Bar -->
-		<div class="navbar">
-			<%= link_to image_tag("cleteci-logo.png", alt: "Cleteci", class: "brand"), root_path %>				
-			<div class="navbar-inner">			
+<!-- Navigation Bar -->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<%= link_to image_tag("cleteci-logo.png", alt: "Cleteci", class: "brand"), root_path %>				
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
 				</a>					    	
 				<nav Class="nav-collapse">		
 					<ul class="nav pull-right">
-						<li class="active"><%= link_to("INICIO", root_path) %></li>
+						<li><%= link_to("INICIO", "#inicio", onclick: 'goTo("intro")') %></li>
 						<!-- <li class="divider-vertical"></li> -->
-						<li><%= link_to("NOSOTROS", "#") %></li>
-						<li><%= link_to("PORTAFOLIO", "#") %></li>						
-						<li><%= link_to("TECNOLOGÍA", "#") %></li>
-						<li><%= link_to("CONTÁCTANOS", new_contact_path) %></li>
-						<li><%= link_to("EMPRENDE CON NOSOTROS", "#") %></li>
+						<li><%= link_to("NOSOTROS", "#nosotros", onclick: 'goTo("company")') %></li>						
+						<li><%= link_to("TECNOLOGÍA", "#tecnologia", onclick: 'goTo("technology")') %></li>
+						<li><%= link_to("CONTÁCTANOS", "#contacto", onclick: 'goTo("contact")') %></li>
 						<% if logged_in? %>
 							<%= render 'layouts/admin' %>
 						<% end %>
 					</ul>
 				</nav>
 			</div>
-		</div>		
-		
+		</div>	
 	</div>
 </header>

@@ -63,11 +63,9 @@ $(document).ready(function(){
             startTime = 0;
             startX = 0;
         }
-    });
-		
-		
-		
-		
-		
-		
+    });		
 });
+
+function goTo(id){
+  $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+}

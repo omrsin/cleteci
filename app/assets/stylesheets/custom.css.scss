@@ -45,12 +45,8 @@ li {
 
 /* Header */
 
-.cross-bar {
-	background-color: $navBarBackground;
-}
-
 .navbar-inner {
-	background-color: transparent;
+	background-color: $navBarBackground;
 	background-image: none;
 	border-radius: 0px;
 	padding: 0px;
@@ -182,6 +178,27 @@ ul.nav-footer {
 
 
 /* Home */
+
+.page-view {
+	height: 1050px;
+	padding-top: 64px;
+}
+
+#intro {
+	
+}
+
+#company {
+	
+}
+
+#techonology {
+
+}
+
+#contact {
+
+}
 
 .break-page {
 	min-height: 10px;
