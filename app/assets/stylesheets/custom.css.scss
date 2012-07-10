@@ -291,6 +291,11 @@ ul.nav-footer {
 		position: absolute;
 		top: 25px;
 		left: 20px;
+		img {
+			position: absolute;
+			top: 75px;
+			left: 17px;
+		}
 	}
 }
 
@@ -309,6 +314,12 @@ ul.nav-footer {
 		-webkit-transform:rotate($company-box-rotation);
 		-o-transform:rotate($company-box-rotation);
 	}
+	img {
+			position: absolute;
+			width: 70px;
+			top: 35px;
+			left: 17px;
+		}
 }
 
 .wrapper {
