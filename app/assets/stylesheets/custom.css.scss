@@ -1,6 +1,17 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
+@font-face {
+    font-family: 'ThrowMyHandsUpintheAirRegular';
+    src: font-url('throwmyhandsupintheair-webfont.eot');
+    src: font-url('throwmyhandsupintheair-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('throwmyhandsupintheair-webfont.woff') format('woff'),
+         font-url('throwmyhandsupintheair-webfont.ttf') format('truetype'),
+         font-url('throwmyhandsupintheair-webfont.svg#ThrowMyHandsUpintheAirRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Colors */
 $myDarkGray: #343434;
 $myBlue: #0081bf;
@@ -8,6 +19,7 @@ $myOrange: #f68c36;
 
 $headerShadow: 0 2px 4px rgba(0, 0, 0, 0);
 $navBarBackground: $myDarkGray;
+$contactSectionBackground: $myDarkGray;
 $navBarText: $myOrange;
 $carouselHeader: $myBlue;
 $breakPageBackground: $myOrange;
@@ -160,6 +172,7 @@ ul.nav-footer {
 
 .carousel {
 	margin-bottom: 0px;
+	height: 325px;
 	article {
 		margin-top: 30px;
 		margin-bottom: 30px;
@@ -182,14 +195,19 @@ ul.nav-footer {
 .page-view {
 	height: 1050px;
 	padding-top: 64px;
+	h1 {
+		font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
 }
 
 #intro {
-	
+	padding-top: 64px;
+	height: 625px;
 }
 
 #company {
-	
+	background-image: asset-url("fondo.png", image);
+	color: $white;
 }
 
 #techonology {
@@ -197,23 +215,40 @@ ul.nav-footer {
 }
 
 #contact {
+	background-color: $contactSectionBackground;
+	color: $myOrange;
+}
 
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 152px;
+}
+
+.clouds-break-page {
+	min-height: 152px;
+	width: 100%;
+	background: asset-url('cleteci-clouds.png', image) no-repeat center 100%;
+	position: absolute;
 }
 
 .break-page {
-	min-height: 10px;
+	min-height: 15px;
+	width: 100%;
 	background-color: $breakPageBackground;
+	position: absolute;
+	bottom: 0;
 }
 
 .content-preview {
-	min-height: 370px;	
-	background-image: asset-url("fondo.png", image);
-	color: $white;
+	min-height: 370px;
+	color: $black;
 	position: relative;
 	a {
-		color: $white;
+		color: $black;
 		&:hover {
-			color: $white;
+			color: $black;
 			text-decoration: none;
 		}
 	}
@@ -221,7 +256,9 @@ ul.nav-footer {
 		margin-top: 60px;
 		margin-left: 20px;
 		h1 {
-			font-size: 24px;
+			font-size: 32px;
+			font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+			
 		}
 	}
 	
