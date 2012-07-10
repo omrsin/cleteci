@@ -35,6 +35,7 @@ $navBarText: $myOrange;
 $carouselHeader: $myBlue;
 $breakPageBackground: $myOrange;
 $contactText: $myOrange;
+$company-box-rotation: -5deg;
 
 /* Mixins */
 @mixin box_sizing {
@@ -239,7 +240,7 @@ ul.nav-footer {
 			text-decoration: none;
 		}
 	}
-	section article{
+	section article {
 		margin-top: 60px;
 		margin-left: 20px;
 		h1 {
@@ -274,13 +275,36 @@ ul.nav-footer {
 		}
 		.ware {
 			padding-left: 6px;
-		}
-		.content-img-portfolio {
-			width: 100px;
-		}
-		.content-portfolio {
-			width: 250px;
-		}
+		}		
+	}	
+}
+
+.content-portfolio {
+	background: asset-url('cleteci-postit-green-2.png', image) no-repeat;
+	min-height: 210px;
+	width: 187px;
+	position: relative;
+	div {
+		position: absolute;
+		top: 25px;
+		left: 20px;
+	}
+}
+
+.content-company {
+	background: asset-url('cleteci-postit-green-1.png', image) no-repeat;
+	min-height: 210px;
+	width: 203px;
+	position: relative;
+	div {
+		position: absolute;
+		top: 25px;
+		left: 47px;
+		transform:rotate($company-box-rotation);
+		-ms-transform:rotate($company-box-rotation);
+		-moz-transform:rotate($company-box-rotation);
+		-webkit-transform:rotate($company-box-rotation);
+		-o-transform:rotate($company-box-rotation);
 	}
 }
 
