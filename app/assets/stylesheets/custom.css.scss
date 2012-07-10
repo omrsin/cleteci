@@ -27,6 +27,7 @@
 $myDarkGray: #343434;
 $myBlue: #0081bf;
 $myOrange: #f68c36;
+$myGreen: #9dd15a;
 
 $headerShadow: 0 2px 4px rgba(0, 0, 0, 0);
 $navBarBackground: $myDarkGray;
@@ -173,24 +174,6 @@ ul.nav-footer {
 
 /* Carousel */
 
-/*.slider-container {
-	position: absolute;
-	width: 30%;
-	left: 10%;
-	top: 10%;
-	background: #222;
-	opacity: 0.5;
-	color: #ffffff;
-	border: 3px solid white;
-	-webkit-border-radius: 23px;
-	-moz-border-radius: 23px;
-	border-radius: 23px;
-	font-weight: 100;
-	line-height: 40px;
-	font-size: 3.030303em;
-	padding: 20px;
-}*/
-
 .carousel {
 	margin-bottom: 0px;
 	height: 325px;
@@ -207,6 +190,26 @@ ul.nav-footer {
 			color: $grayDark;
 			line-height: 25px;
 		}
+	}
+}
+
+.carousel-image {
+	padding-top: 40px;
+}
+
+.carousel-text {
+	font-size: 64px;
+	height: 325px;
+	padding-top: 150px;
+	padding-left: 175px;
+	em {
+		font-style: normal;
+	}
+	.soft {
+		color: $myGreen; 
+	}
+	.ware {
+		padding-left: 6px;
 	}
 }
 
@@ -247,7 +250,7 @@ ul.nav-footer {
 			font-size: 32px;
 			font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 			font-weight: normal;
-			color: #333333;
+			color: $myDarkGray;
 			
 		}
 	}
@@ -270,7 +273,7 @@ ul.nav-footer {
 			font-size: 15px;
 		}
 		.soft {
-			color: #9dd15a;
+			color: $myGreen;
 			font-weight: bold;
 		}
 		.ware {
@@ -333,7 +336,7 @@ ul.nav-footer {
 /* Company */
 
 #company {
-	background-image: asset-url("fondo.png", image);
+	background-image: asset-url("fondo.jpg", image);
 	color: $white;
 }
 
