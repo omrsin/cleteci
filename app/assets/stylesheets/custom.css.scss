@@ -12,6 +12,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Imagine';
+    src: font-url('imagine_font-webfont.eot');
+    src: font-url('imagine_font-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('imagine_font-webfont.woff') format('woff'),
+         font-url('imagine_font-webfont.ttf') format('truetype'),
+         font-url('imagine_font-webfont.svg#imagine_font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Colors */
 $myDarkGray: #343434;
 $myBlue: #0081bf;
@@ -48,10 +59,19 @@ body {
 
 ul {
 	list-style: none;
+	margin: 0;
 }
 
 li {
 	margin-top: 10px;
+}
+
+.soft {
+	font-family: 'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.ware {
+	font-family: 'Imagine', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
@@ -201,23 +221,67 @@ ul.nav-footer {
 	}
 }
 
+/* Intro */
+
 #intro {
 	padding-top: 64px;
 	height: 625px;
 }
 
-#company {
-	background-image: asset-url("fondo.png", image);
-	color: $white;
-}
-
-#techonology {
-
-}
-
-#contact {
-	background-color: $contactSectionBackground;
-	color: $myOrange;
+.content-preview {
+	min-height: 370px;
+	color: $black;
+	position: relative;
+	a {
+		color: $black;
+		&:hover {
+			color: $black;
+			text-decoration: none;
+		}
+	}
+	section article{
+		margin-top: 60px;
+		margin-left: 20px;
+		h1 {
+			font-size: 32px;
+			font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-weight: normal;
+			color: #333333;
+			
+		}
+	}
+	
+	.article-content {
+		margin-top: 15px;
+		ul li {
+			padding-left: 37px;
+			background-image: asset-url('cleteci-orange-arrow.png', image);
+			background-repeat: no-repeat;
+			background-position: 0 .2em;
+			margin-top: 5px;
+		}
+		p {
+			margin-left: 15px;
+			line-height: 22px;
+		}
+		em {
+			font-style: normal;
+			font-size: 15px;
+		}
+		.soft {
+			color: #9dd15a;
+			font-weight: bold;
+		}
+		.ware {
+			padding-left: 6px;
+		}
+		.content-img-portfolio {
+			width: 100px;
+		}
+		.content-portfolio {
+			width: 250px;
+		}
+	}
 }
 
 .wrapper {
@@ -242,42 +306,26 @@ ul.nav-footer {
 	bottom: 0;
 }
 
-.content-preview {
-	min-height: 370px;
-	color: $black;
-	position: relative;
-	a {
-		color: $black;
-		&:hover {
-			color: $black;
-			text-decoration: none;
-		}
-	}
-	section article{
-		margin-top: 60px;
-		margin-left: 20px;
-		h1 {
-			font-size: 32px;
-			font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
-			font-weight: normal;
-			
-		}
-	}
-	
-	.article-content {
-		margin-top: 15px;
-		p {
-			margin-left: 15px;
-			line-height: 22px;
-		}
-		.content-img-portfolio {
-			width: 100px;
-		}
-		.content-portfolio {
-			width: 250px;
-		}
-	}
+/* Company */
+
+#company {
+	background-image: asset-url("fondo.png", image);
+	color: $white;
 }
+
+/* Technology */ 
+
+#techonology {
+
+}
+
+/* Contact */
+
+#contact {
+	background-color: $contactSectionBackground;
+	color: $myOrange;
+}
+
 
 /* Forms */
 
