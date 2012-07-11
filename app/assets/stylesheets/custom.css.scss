@@ -36,7 +36,8 @@ $navBarText: $myOrange;
 $carouselHeader: $myBlue;
 $breakPageBackground: $myOrange;
 $contactText: $myOrange;
-$company-box-rotation: -5deg;
+$intro-box-rotation: -5deg;
+$company-box-rotation: -6deg;
 
 /* Mixins */
 @mixin box_sizing {
@@ -308,11 +309,11 @@ ul.nav-footer {
 		position: absolute;
 		top: 25px;
 		left: 47px;
-		transform:rotate($company-box-rotation);
-		-ms-transform:rotate($company-box-rotation);
-		-moz-transform:rotate($company-box-rotation);
-		-webkit-transform:rotate($company-box-rotation);
-		-o-transform:rotate($company-box-rotation);
+		transform:rotate($intro-box-rotation);
+		-ms-transform:rotate($intro-box-rotation);
+		-moz-transform:rotate($intro-box-rotation);
+		-webkit-transform:rotate($intro-box-rotation);
+		-o-transform:rotate($intro-box-rotation);
 	}
 	img {
 			position: absolute;
@@ -349,6 +350,74 @@ ul.nav-footer {
 #company {
 	background-image: asset-url("fondo.jpg", image);
 	color: $white;
+	padding-top: 140px;
+	height: 980px;
+	h1 {
+		font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: normal;
+	}
+	#scrum {
+		margin-left: 60px;
+		img {
+			padding-bottom: 20px;
+		}
+	}
+	.text-content {
+		margin-left: 50px;
+		em {
+			font-style: normal;
+			&.soft {
+				color: $myGreen;
+			}
+		}
+	}
+	.second-row {
+		div {
+			height: 250px;
+			position: relative;
+			margin-top: 56px;
+			p {
+				width: 179px;				
+				font-size: 16px;
+				line-height: 24px;
+				color: $black;
+				font-family: 'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+				em {
+					font-style: normal;
+					&.soft {
+						color: $white;
+					}
+				}				
+			}
+		}
+		.weareagile {
+			background: asset-url("cleteci-weareagile.png",image) no-repeat 55px 20px;
+		}
+		.postit1 {
+			background: asset-url("cleteci-postit-orange-1.png",image) no-repeat;
+			p {				
+				position: absolute;
+				top: 18px;
+				left: 15px;
+			}
+		}
+		.postit2 {
+			background: asset-url("cleteci-postit-orange-2.png",image) no-repeat;
+			p {
+				position: absolute;
+				top: 18px;
+				left: 18px;
+				transform:rotate($company-box-rotation);
+				-ms-transform:rotate($company-box-rotation);
+				-moz-transform:rotate($company-box-rotation);
+				-webkit-transform:rotate($company-box-rotation);
+				-o-transform:rotate($company-box-rotation);
+			} 
+		}
+		.sketchedlogo {
+			background: asset-url("cleteci-logo-sketch.png",image) no-repeat;
+		}
+	}
 }
 
 /* Technology */ 
