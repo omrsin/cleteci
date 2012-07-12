@@ -582,6 +582,16 @@ input, textarea, select, .uneditable-input {
   @include box_sizing;
 }
 
+.floating-left-label {
+	float: left;
+	margin-right: 15px;
+}
+
+.submit-appointment {
+	margin-top: 25px;
+	margin-left: 90px;
+}
+
 #error_explanation {
   color: #f00;
   ul {

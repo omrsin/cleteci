@@ -20,7 +20,7 @@
 			<%= contact_f.label :phone, "Teléfono" %>
 			<%= contact_f.text_field :phone %>
 
-			<%= contact_f.label :wish_info, "¿Desea recibir información?" %>
+			<%= contact_f.label :wish_info, "¿Desea recibir información?", class: "floating-left-label" %>
 			<%= contact_f.check_box :wish_info, checked: true  %>
 		<% end %>
 	</div>
@@ -42,13 +42,13 @@
 																							["Después de las 6PM"]]) %>
 
 			<div style="width: 100%;">
-				<%= f.label :via, "Por medio de:" %>
-				<%= f.radio_button :via, "Correo", checked: true %>Correo
-				<%= f.radio_button :via, "Skype" %>Skype
-				<%= f.radio_button :via, "Teléfono" %>Teléfono
+				<%= f.label :via, "Por medio de:", class: "floating-left-label" %>
+				<%= f.radio_button :via, "Correo", checked: true %>  Correo
+				<%= f.radio_button :via, "Skype" %>  Skype
+				<%= f.radio_button :via, "Teléfono" %>  Teléfono
 			</div>
 
-			<%= f.submit "Enviar", class: "btn btn-large btn-primary" %>				
+			<%= f.submit "Enviar", class: "btn btn-large btn-primary submit-appointment" %>				
 		</div>
 	</div>
 <% end %>
