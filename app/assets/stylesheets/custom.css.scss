@@ -38,6 +38,7 @@ $breakPageBackground: $myOrange;
 $contactText: $myOrange;
 $intro-box-rotation: -5deg;
 $company-box-rotation: -6deg;
+$technology-box-rotation: -3deg;
 
 /* Mixins */
 @mixin box_sizing {
@@ -230,6 +231,18 @@ ul.nav-footer {
 	height: 135px;
 	width: 140px;
 	position: absolute;
+	p {
+		width: 80%;
+		top: 20px;
+		left: 10px;
+		position: absolute;
+		text-align: center;
+		color: $white;
+		font-family: 'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 20px;
+	}
 }
 
 /* Intro */
@@ -429,7 +442,8 @@ ul.nav-footer {
 /* Technology */ 
 
 #technology {
-	padding-top: 140px;	
+	background: asset-url("cleteci-technology-background.jpg", image);
+	padding-top: 190px;	
 	height: 980px;;
 	h1 {
 		font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -437,11 +451,89 @@ ul.nav-footer {
 	}
 	.blackboard {
 		position: relative;
-		#tech-msg1 {
-			background: asset-url("cleteci-postit-blue-1.png",image) no-repeat;
+		.languages {
+			min-height: 350px;
+			#tech-msg1 {
+				background: asset-url("cleteci-postit-blue-1.png",image) no-repeat;
+				top: -113px;
+				left: 350px;
+				p {
+					width: 70%;
+					top: 33px;
+					left: 14px;
+					transform:rotate($technology-box-rotation);
+					-ms-transform:rotate($technology-box-rotation);
+					-moz-transform:rotate($technology-box-rotation);
+					-webkit-transform:rotate($technology-box-rotation);
+					-o-transform:rotate($technology-box-rotation);
+				}
+			}
+			#tech-msg2 {
+				background: asset-url("cleteci-postit-blue-2.png",image) no-repeat;
+				top: -40px;
+				left: 450px;
+			}
+			#html5 {
+				background: asset-url("cleteci-postit-html5.png",image) no-repeat;
+				left: 9%;
+				top: 120px;
+			}
+			#css3 {
+				background: asset-url("cleteci-postit-css3.png",image) no-repeat;
+				left: 17%;
+				top: 190px;
+				z-index: 2;
+			}
+			#rails {
+				background: asset-url("cleteci-postit-rails.png",image) no-repeat;
+				left: 26%;
+				top: 100px;
+			}
+			#php {
+				background: asset-url("cleteci-postit-php.png",image) no-repeat;
+				left: 42%;
+				top: 190px;
+			}
+			#java {
+				background: asset-url("cleteci-postit-java.png",image) no-repeat;
+				left: 57%;
+			}
+			#microsoft {
+				background: asset-url("cleteci-postit-microsoft.png",image) no-repeat;
+				left: 67%;
+				top: 190px;
+			}
+			#oracle {
+				background: asset-url("cleteci-postit-oracle.png",image) no-repeat;
+				top: -40px;
+				left: 75%;
+			}
 		}
-		#tech-msg2 {
-			background: asset-url("cleteci-postit-blue-2.png",image) no-repeat;
+		.agile-tools {
+			#jira {
+				background: asset-url("cleteci-postit-jira.png",image) no-repeat;
+				left: 7%;
+				top: 395px;
+			}
+			#versionone {
+				background: asset-url("cleteci-postit-versionone.png",image) no-repeat;
+				left: 23%;
+				top: 410px;
+			}
+			#pivotaltracker {
+				background: asset-url("cleteci-postit-pivotal.png",image) no-repeat;
+				left: 39%;
+			}
+			#greenhopper {
+				background: asset-url("cleteci-postit-green.png",image) no-repeat;
+				left: 55%;
+				top: 400px;
+			}
+			#redmine {
+				background: asset-url("cleteci-postit-redmine.png",image) no-repeat;
+				left: 75%;
+				top: 410px;
+			}
 		}
 	}
 }
