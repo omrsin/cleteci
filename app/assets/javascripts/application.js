@@ -19,7 +19,7 @@
 //= require_tree .
 
 $(function(){	
-  $('.carousel').carousel(); 
+  $('.carousel').carousel({interval: 2500}); 
   
 });
 
