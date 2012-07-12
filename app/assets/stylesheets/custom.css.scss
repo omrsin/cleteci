@@ -227,7 +227,7 @@ ul.nav-footer {
 }
 
 .postit {
-	height: 1350px;
+	height: 135px;
 	width: 140px;
 	position: absolute;
 }
@@ -430,17 +430,19 @@ ul.nav-footer {
 
 #technology {
 	padding-top: 140px;	
-	height: 980px;
-	position: relative;
+	height: 980px;;
 	h1 {
 		font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-weight: normal;
 	}
-	#tech-msg1 {
-		background: asset-url("cleteci-postit-blue-1.png",image) no-repeat;
-	}
-	#tech-msg2 {
-		background: asset-url("cleteci-postit-blue-2.png",image) no-repeat;
+	.blackboard {
+		position: relative;
+		#tech-msg1 {
+			background: asset-url("cleteci-postit-blue-1.png",image) no-repeat;
+		}
+		#tech-msg2 {
+			background: asset-url("cleteci-postit-blue-2.png",image) no-repeat;
+		}
 	}
 }
 
