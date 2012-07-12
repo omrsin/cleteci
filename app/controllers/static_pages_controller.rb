@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+  	@appointment = Appointment.new
   end
   
   def contact
@@ -19,9 +20,9 @@ class StaticPagesController < ApplicationController
   	@appointment.contact = @contact
   	if @appointment.save
     	flash[:success] = "Ha registrado su cita exitosamente"
-    	redirect_to new_contact_path
+    	redirect_to root_path
     else
-    	render 'contact'
+    	render 'home'
     end
   end
 end

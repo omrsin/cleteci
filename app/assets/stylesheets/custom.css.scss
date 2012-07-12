@@ -78,6 +78,10 @@ li {
 	font-family: 'Imagine', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.flash-margin {
+	margin-top: 75px;
+}
+
 
 /* Header */
 
@@ -144,6 +148,7 @@ ul.nav-footer {
 
 .footer-contact {
 	color: $white;
+	margin-left: 50px;
 	margin-top: 15px;
 	margin-right: 15px;
 	margin-bottom: 15px;
@@ -444,7 +449,7 @@ ul.nav-footer {
 #technology {
 	background: asset-url("cleteci-technology-background.jpg", image);
 	padding-top: 190px;	
-	height: 980px;;
+	height: 980px;
 	h1 {
 		font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-weight: normal;
@@ -541,8 +546,28 @@ ul.nav-footer {
 /* Contact */
 
 #contact {
-	background-color: $contactSectionBackground;
-	color: $myOrange;
+	background-color: $contactSectionBackground;	
+	padding-top: 140px;	
+	height: 980px;
+	color: $white;
+	label {
+		color: $white;
+	}
+	h1 {
+		font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		color: $myOrange;
+	}
+	.postit {
+		position: relative;
+	}
+	#arrange {
+		background: asset-url("cleteci-postit-arrange.png",image) no-repeat;
+		margin-left: 40px;
+	}
+	.mail img {
+		padding-left: 10px;
+	}
 }
 
 
