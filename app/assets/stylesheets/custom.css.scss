@@ -158,6 +158,9 @@ ul.nav-footer {
 	p {
 		margin: 0px;
 	}
+	a {
+		color: $white;
+	}
 	.contact-content {
 		margin-top: 15px;
 	}
@@ -223,14 +226,14 @@ ul.nav-footer {
 
 /* Home */
 
-.page-view {
+/*.page-view {
 	height: 1050px;
 	padding-top: 64px;
 	h1 {
 		font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-weight: normal;
 	}
-}
+}*/
 
 .postit {
 	height: 135px;

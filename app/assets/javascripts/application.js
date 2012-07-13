@@ -19,8 +19,23 @@
 //= require_tree .
 
 $(function(){	
-  $('.carousel').carousel({interval: 2500}); 
-  
+  $('.carousel').carousel({interval: 2500});  
+});
+
+function goTo(id){
+  $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+}
+
+function resize(){
+  var new_heigth = window.innerHeight;
+  $('#intro').css('height', new_heigth-219);
+  $('#company').css('height', new_heigth);
+  $('#technology').css('height', new_heigth);
+  $('#contact').css('height', new_heigth);
+}
+
+$(document).ready(function(){
+	resize();
 });
 
 $(document).ready(function(){
@@ -65,7 +80,3 @@ $(document).ready(function(){
         }
     });		
 });
-
-function goTo(id){
-  $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
-}
