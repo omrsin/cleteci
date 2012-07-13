@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.datepicker-es
 //= require bootstrap-carousel
 //= require bootstrap-transition
 //= require bootstrap-dropdown
@@ -19,7 +20,8 @@
 //= require_tree .
 
 $(function(){	
-  $('.carousel').carousel({interval: 2500});  
+  $('.carousel').carousel({interval: 2500});
+  $('#appointment_date').datepicker();
 });
 
 function goTo(id){

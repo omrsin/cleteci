@@ -30,11 +30,11 @@
 	<div class="span6">
 		<div class="offset1">
 			<%= f.label :topic, "Tópico" %>
-			<%= f.text_field :topic %> 
-
+			<%= f.text_area :topic %> 
+			
 			<%= f.label :date, "Fecha" %>
-			<%= f.date_select :date %>
-
+			<%= f.text_field :date %>
+		  
 			<%= f.label :time, "Hora" %>
 			<%= f.select :time, options_for_select([["Entre 8 AM y 12 PM"], 
 																							["Entre 12 PM y 2 PM"],
