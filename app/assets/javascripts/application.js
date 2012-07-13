@@ -38,6 +38,9 @@ function resize(){
 
 $(document).ready(function(){
 	resize();
+	if ($('.alert-error').text()) {
+		goTo('contact');
+	}
 });
 
 $(document).ready(function(){
