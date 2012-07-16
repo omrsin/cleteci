@@ -10,12 +10,24 @@
 					<span class="icon-bar"></span>
 				</a>					    	
 				<nav Class="nav-collapse">		
-					<ul class="nav pull-right">
-						<li><%= link_to("INICIO", "#inicio", onclick: 'goTo("intro")') %></li>
+					<ul class="nav pull-right">					
+						<li id="menu1">
+							<%= link_to("INICIO", "#inicio", onclick: 'goTo("intro")') %>
+							<aside></aside>
+						</li>
 						<!-- <li class="divider-vertical"></li> -->
-						<li><%= link_to("NOSOTROS", "#nosotros", onclick: 'goTo("company")') %></li>						
-						<li><%= link_to("TECNOLOGÍA", "#tecnologia", onclick: 'goTo("technology")') %></li>
-						<li><%= link_to("CONTÁCTANOS", "#contacto", onclick: 'goTo("contact")') %></li>
+						<li id="menu2">
+							<%= link_to("NOSOTROS", "#nosotros", onclick: 'goTo("company")') %>
+							<aside></aside>
+						</li>
+						<li id="menu3">
+							<%= link_to("TECNOLOGÍA", "#tecnologia", onclick: 'goTo("technology")') %>
+							<aside></aside>
+						</li>
+						<li id="menu4">
+							<%= link_to("CONTÁCTANOS", "#contacto", onclick: 'goTo("contact")') %>
+							<aside></aside>
+						</li>
 						<% if logged_in? %>
 							<%= render 'layouts/admin' %>
 						<% end %>

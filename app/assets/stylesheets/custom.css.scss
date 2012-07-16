@@ -101,6 +101,7 @@ li {
 		margin-top: 15px;
 		> li > a {
 			color: $white;
+			padding-bottom: 0;
 			&:hover {
 				color: $navBarText;
 			}
@@ -112,6 +113,23 @@ li {
 				color: $navBarText;
 				background-color: transparent;
 			}
+		}
+		li aside{			
+			height: 10px;
+			width: 0px;
+			margin-left: 4px;
+		}
+		#menu1 aside {
+			background: asset-url("cleteci-menu-underline-1.png", image) no-repeat;
+		}
+		#menu2 aside {
+			background: asset-url("cleteci-menu-underline-2.png", image) no-repeat;
+		}
+		#menu3 aside {
+			background: asset-url("cleteci-menu-underline-3.png", image) no-repeat;
+		}
+		#menu4 aside {
+			background: asset-url("cleteci-menu-underline-4.png", image) no-repeat;
 		}
 	}
 }

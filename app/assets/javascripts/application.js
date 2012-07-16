@@ -44,6 +44,17 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	$('nav li#menu1 a').hover(function(){$('#menu1 aside').animate({width: '47px'},200);},
+														function(){$('#menu1 aside').animate({width: '0px'},200);});
+	$('nav li#menu2 a').hover(function(){$('#menu2 aside').animate({width: '73px'},200);},
+														function(){$('#menu2 aside').animate({width: '0px'},200);});
+	$('nav li#menu3 a').hover(function(){$('#menu3 aside').animate({width: '87px'},200);},
+														function(){$('#menu3 aside').animate({width: '0px'},200);});
+	$('nav li#menu4 a').hover(function(){$('#menu4 aside').animate({width: '98px'},200);},
+														function(){$('#menu4 aside').animate({width: '0px'},200);});
+});
+
+$(document).ready(function(){
 	var maxTime = 1000,
 			target = $('.carousel'),
 			startX = 0,
