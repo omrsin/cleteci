@@ -12,20 +12,20 @@
 				<nav Class="nav-collapse">		
 					<ul class="nav pull-right">					
 						<li id="menu1">
-							<%= link_to("INICIO", "#inicio", onclick: 'goTo("intro")') %>
+							<%= link_to( t(".home"), "#inicio", onclick: 'goTo("intro")') %>
 							<aside></aside>
 						</li>
 						<!-- <li class="divider-vertical"></li> -->
 						<li id="menu2">
-							<%= link_to("NOSOTROS", "#nosotros", onclick: 'goTo("company")') %>
+							<%= link_to( t(".company"), "#nosotros", onclick: 'goTo("company")') %>
 							<aside></aside>
 						</li>
 						<li id="menu3">
-							<%= link_to("TECNOLOGÍA", "#tecnologia", onclick: 'goTo("technology")') %>
+							<%= link_to( t(".technology"), "#tecnologia", onclick: 'goTo("technology")') %>
 							<aside></aside>
 						</li>
 						<li id="menu4">
-							<%= link_to("CONTÁCTANOS", "#contacto", onclick: 'goTo("contact")') %>
+							<%= link_to( t(".contact"), "#contacto", onclick: 'goTo("contact")') %>
 							<aside></aside>
 						</li>
 						<% if logged_in? %>

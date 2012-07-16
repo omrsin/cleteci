@@ -1,9 +1,9 @@
 <li class="dropdown">
-	<a class="dropdown-toggle" data-toggle="dropdown">ADMINISTRACIÓN<b class="caret"></b></a>
+	<a class="dropdown-toggle" data-toggle="dropdown"><%= t(".admin") %><b class="caret"></b></a>
 	<ul class="dropdown-menu">
-		<%= link_to("CITAS", appointments_path) %>
-		<%= link_to("CONTACTOS", contacts_path) %>
-		<%= link_to("USUARIOS", users_path) %>				
-		<%= link_to("SALIR", logout_path, method: "delete") %>									
+		<%= link_to( t(".appointments"), appointments_path) %>
+		<%= link_to( t(".contacts"), contacts_path) %>
+		<%= link_to( t(".users"), users_path) %>				
+		<%= link_to( t(".logout"), logout_path, method: "delete") %>									
 	</ul>
 </li>

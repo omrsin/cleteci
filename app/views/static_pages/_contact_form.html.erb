@@ -5,22 +5,22 @@
 	
 	<div class="span3">
 		<%= fields_for :contact, @appointment.contact do |contact_f| %>
-			<%= contact_f.label :name, "Nombre" %>
+			<%= contact_f.label :name %>
 			<%= contact_f.text_field :name %>
 
-			<%= contact_f.label :lastname, "Apellido" %>
+			<%= contact_f.label :lastname %>
 			<%= contact_f.text_field :lastname %>
 
-			<%= contact_f.label :email, "Correo" %>
+			<%= contact_f.label :email %>
 			<%= contact_f.text_field :email %>
 
-			<%= contact_f.label :skypeid, "SkypeID" %>
+			<%= contact_f.label :skypeid %>
 			<%= contact_f.text_field :skypeid %>
 
-			<%= contact_f.label :phone, "Teléfono" %>
+			<%= contact_f.label :phone %>
 			<%= contact_f.text_field :phone %>
 
-			<%= contact_f.label :wish_info, "¿Desea recibir información?", class: "floating-left-label" %>
+			<%= contact_f.label :wish_info, class: "floating-left-label" %>
 			<%= contact_f.check_box :wish_info, checked: true  %>
 		<% end %>
 	</div>
@@ -29,26 +29,26 @@
 	</div> 
 	<div class="span6">
 		<div class="offset1">
-			<%= f.label :topic, "Tópico" %>
+			<%= f.label :topic %>
 			<%= f.text_area :topic %> 
 			
-			<%= f.label :date, "Fecha" %>
+			<%= f.label :date %>
 			<%= f.text_field :date %>
 		  
-			<%= f.label :time, "Hora" %>
-			<%= f.select :time, options_for_select([["Entre 8 AM y 12 PM"], 
-																							["Entre 12 PM y 2 PM"],
-																							["Entre 2 PM y 6PM"],
-																							["Después de las 6PM"]]) %>
+			<%= f.label :time %>
+			<%= f.select :time, options_for_select([[t(".select1")], 
+																							[t(".select2")],
+																							[t(".select3")],
+																							[t(".select4")]]) %>
 
 			<div style="width: 100%;">
-				<%= f.label :via, "Por medio de:", class: "floating-left-label" %>
-				<%= f.radio_button :via, "Correo", checked: true %>  Correo
-				<%= f.radio_button :via, "Skype" %>  Skype
-				<%= f.radio_button :via, "Teléfono" %>  Teléfono
+				<%= f.label :via, class: "floating-left-label" %>
+				<%= f.radio_button :via, "Correo", checked: true %>  <%= t ".radio1" %>
+				<%= f.radio_button :via, "Skype" %>  <%= t ".radio2" %>
+				<%= f.radio_button :via, "Teléfono" %>  <%= t ".radio3" %>
 			</div>
 
-			<%= f.submit "Enviar", class: "btn btn-large btn-primary submit-appointment" %>				
+			<%= f.submit t(".submit"), class: "btn btn-large btn-primary submit-appointment" %>				
 		</div>
 	</div>
 <% end %>

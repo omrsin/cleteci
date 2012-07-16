@@ -1,0 +1,199 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+  layouts:
+    header:
+      home: INICIO
+      company: NOSOTROS
+      technology: TECNOLOGÍA
+      contact: CONTÁCTANOS
+    admin:
+      admin: ADMINISTRACIÓN
+      appointments: CITAS
+      contacts: CONTACTOS
+      users: USUARIOs
+      logout: SALIR
+  static_pages:
+    intro:
+      title: ¿Qué hacemos?
+      bullet1_html: Desarrollo, mantenimiento y operación de <em class="soft">SOFT</em><em class="ware">WARE</em>
+      bullet2: Integración de aplicaciones
+      bullet3: Soluciones para mensajería de texto y listas de correos 
+      bullet4: Consultoría IT
+      bullet5: Pruebas automatizadas
+      bullet6: Product Discovery
+      bullet7: Diseño Web
+      postit1: Portafolio de Servicios
+      postit2: Nosotros
+    company:
+      title: Nosotros
+      parragraph1_html: El <em class="soft">Soft</em><em class="ware">Ware</em> está transformando el mundo y en Cleteci contribuímos a ese cambio... Somos una empresa de Desarrollo de <em class="soft">Soft</em><em class="ware">Ware</em> y tecnología de información, con experiencia en la entrega de soluciones para clientes de un amplio rango de industrias. Amamos el <em class="soft">Soft</em><em class="ware">Ware</em> y, con convicción, nos dedicamos a producirlo. Estamos comprometidos con el producto, la calidad y la mejora continua como único para garantizar una relación ganar-ganar con nuestra gente, nustros clientes, el medio ambiente y la sociedad.
+      parragraph2_html: El equipo de profesionales de cleteci cuenta con experiencia desarrollando <em class="soft">Soft</em><em class="ware">Ware</em> para grandes y pequeñas empresas, en grandes y pequeños proyectos. Además nos emociona trabajar en emprendimientos Web 2.0 para las cuales conocemos arquitecturas innovadoras basadas en Software as a Service y Cloud Computing.
+      postit1_html: Utilizamos prácticas de Desarrollo de <em class="soft">Soft</em><em class="ware">Ware</em> Ágil para la entrega de productos que maximizan el retorno de inversión en corto plazo, buscando la entrega continua de resultados.
+      postit2_html: Nos tomamos en serio la agilidad. Varios de nosotros estamos certificados como Scrum Master y Scrum Product Owner para introducir prácticas de desarrollo de <em class="soft">Soft</em><em class="ware">Ware</em> de clase mundial.
+    technology:
+      title1: Teconología
+      title2: Agile Management Tools
+      postit1: Evolucionamos con la Tecnología
+      postit2: Nos reinventamos con tus necesidades
+    contact:
+      title: Contáctanos
+    contact_form:
+      radio1: Correo
+      radio2: Skype
+      radio3: Teléfono
+      select1: Entre 8 AM y 12 PM
+      select2: Entre 12 PM y 2 PM
+      select3: Entre 2 PM y 6PM
+      select4: Después de las 6PM
+      submit: Enviar
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    - 
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%A, %d de %B de %Y'
+      short: ! '%d de %b'
+    month_names:
+    - 
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: cerca de 1 hora
+        other: cerca de %{count} horas
+      about_x_months:
+        one: cerca de 1 mes
+        other: cerca de %{count} meses
+      about_x_years:
+        one: cerca de 1 año
+        other: cerca de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: ! '%{count} días'
+      x_minutes:
+        one: 1 minuto
+        other: ! '%{count} minutos'
+      x_months:
+        one: 1 mes
+        other: ! '%{count} meses'
+      x_seconds:
+        one: 1 segundo
+        other: ! '%{count} segundos'
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minuto
+      month: Mes
+      second: Segundos
+      year: Año
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      blank: no puede estar en blanco
+      confirmation: no coincide con la confirmación
+      invalid: es inválido
+      taken: ya existe
+      too_long:
+        one: es demasiado largo (máximo 1 caracter)
+        other: "es demasiado largo (máximo %{count} caracteres)"
+      too_short:
+        one: es demasiado corto (mínimo 1 caracter)
+        other: "es demasiado corto (mínimo %{count} caracteres)"
+      template:
+      body: ! 'Revise que los siguientes campos sean válidos:'
+      header:
+        one: ! '%{model} no pudo guardarse debido a 1 error'
+        other: ! '%{model} no pudo guardarse debido a %{count} errores'
+  helpers:
+   label:
+     contact:
+       name: Nombre
+       lastname: Apellido
+       email: Correo
+       skypeid: SkypeID
+       phone: Teléfono
+       wish_info: ¿Desea recibir información?
+     appointment:
+       date: Fecha
+       time: Hora
+       topic: Tópico
+       via: "Por medio de:"
+  activerecord:
+    errors:
+      <<: *errors
+    attributes:
+      user:
+        password: Contraseña
+        password_confirmation: Confirmación de la contraseña
+        password_digest: Contraseña
+        username: Usuario        
+      appointment:
+        date: Fecha
+        time: Hora
+        topic: Tópico
+        via: Vía
+      contact:
+        name: Nombre
+        lastname: Apellido
+        email: Correo
+        skypeid: SkypeID
+        phone: Teléfono
+        wish_info: Desea Información
