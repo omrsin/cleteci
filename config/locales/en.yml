@@ -14,3 +14,43 @@ en:
       contacts: CONTACTS
       users: USERS 
       logout: LOGOUT
+  static_pages:
+    intro:
+      title: What do we do?
+      bullet1_html: Development, maintenance and operation of <em class="soft">SOFT</em><em class="ware">WARE</em>
+      bullet2: App integration
+      bullet3: Solutions for text messaging and mail lists
+      bullet4: IT Consulting
+      bullet5: Automated Tests
+      bullet6: Product Discovery
+      bullet7: Web Design
+      postit1: Portfolio of Services
+      postit2: The team!
+    company:
+      title: Company
+      parragraph1_html: Nowadays, the <em class="soft">Soft</em><em class="ware">Ware</em> is transforming the world as we know it and in Cleteci we add our grain of sand to this change... We are a <em class="soft">Soft</em><em class="ware">Ware</em> development company dedicated to information technology. We have experience delivering successfull solutions to our clients among a broad range of industries. We LOVE the <em class="soft">Soft</em><em class="ware">Ware</em> and, with devotion, we dedicate ourselves to produce it. Here in Cleteci we are fully engaged with the product, its quality and its continuous improvement as the only mean to guarantee a win-win relationship with our people, our clients, the environment and the society.
+      parragraph2_html: Our team of professionals has experience developing <em class="soft">Soft</em><em class="ware">Ware</em> for big and small clients, in big and small projects. Also we are thrilled to work with Web 2.0 ventures for which we know state-of-the-art architectures based in Software as a Services and Cloud Computing.
+      postit1_html: We apply Agile <em class="soft">Soft</em><em class="ware">Ware</em> development techniques in order to maximize the Return of Investment in a short term, always focused on continuously delivering results.
+      postit2_html: We take Agile seriously. Several of us are certified Scrum Masters and Scrum Product Owners. This way we can introduce Agile <em class="soft">Soft</em><em class="ware">Ware</em> development world-class practices.
+    technology:
+      title1: Technology
+      title2: Agile Management Tools
+      postit1: We Evolve with the Technology
+      postit2: and reinvent ourselves with your needs
+    contact:
+      title: Contact us
+    contact_form:
+      radio1: Email
+      radio2: Skype
+      radio3: Phone
+      select1: Between 8 AM and 12 PM
+      select2: Between 12 PM and 2 PM
+      select3: Between 2 PM and 6PM
+      select4: After 6PM
+      submit: Submit
+  helpers:
+    label:
+      contact:
+        wish_info: Do you wish to receive information?
+      appointment:
+        via: Using
