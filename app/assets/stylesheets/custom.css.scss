@@ -477,6 +477,9 @@ ul.nav-footer {
 	}
 	.blackboard {
 		position: relative;
+		.postit {
+			cursor: move;
+		}
 		.languages {
 			min-height: 350px;
 			#tech-msg1 {
@@ -493,7 +496,7 @@ ul.nav-footer {
 					-webkit-transform:rotate($technology-box-rotation);
 					-o-transform:rotate($technology-box-rotation);
 				}
-			}
+			}			
 			#tech-msg2 {
 				background: asset-url("cleteci-postit-blue-2.png",image) no-repeat;
 				top: -40px;

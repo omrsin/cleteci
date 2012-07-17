@@ -19,6 +19,9 @@
 //= require bootstrap-collapse
 //= require_tree .
 
+var clicking;
+var zindex=5;
+
 $(function(){	
   $('.carousel').carousel({interval: 2500});
   $('#appointment_date').datepicker();
@@ -27,6 +30,45 @@ $(function(){
 function goTo(id){
   $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
 }
+
+function movePostit(e){
+	if (clicking==true) {
+		e.preventDefault();
+		this.style.left = (e.pageX-$('.blackboard').offset().left-70)+"px";
+		this.style.top = (e.pageY-$('.blackboard').offset().top-70)+"px";
+	}
+}
+
+function clickingPostit(e){
+	e.preventDefault();
+	$(this).css('z-index',zindex);
+	zindex++;
+	clicking = true;
+}
+
+function unclickingPostit(e){
+	e.preventDefault();
+	clicking = false;
+}
+
+$(document).ready(function(){
+	$('.blackboard .postit').bind({
+		mousedown: clickingPostit,
+		mousemove: movePostit,
+		mouseup: unclickingPostit
+	});
+
+//	$('.blackboard .postit').mousedown(function(e){
+//  	e.preventDefault();
+//  	$(this).addClass('postit-selected');
+//  	bind.mousemove(dropPostit);
+//  });
+
+//  $('.blackboard .postit').mouseup(function(e){
+//  	$(this).removeClass('postit-selected');
+//  	unbind.mousemove(dropPostit);
+//  });
+});
 
 function resize(){
   var new_heigth = window.innerHeight;
