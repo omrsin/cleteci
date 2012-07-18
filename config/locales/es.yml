@@ -49,7 +49,7 @@ es:
       select2: Entre 12 PM y 2 PM
       select3: Entre 2 PM y 6PM
       select4: Después de las 6PM
-      submit: Enviar
+      submit: enviar
   date:
     abbr_day_names:
     - dom

@@ -673,9 +673,30 @@ textarea {
 	margin-right: 15px;
 }
 
-.submit-appointment {
+input.submit-appointment {
+	font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 25px;
 	margin-top: 25px;
-	margin-left: 90px;
+	margin-left: 30px;
+	width: 188px;
+	background: asset-url('cleteci-send-sprite.png', image) no-repeat;
+	height: 52px;
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;	
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	&:hover {
+		background-color: transparent;
+		background-position: -188px 0;
+		-webkit-transition: none;
+		-moz-transition: none;
+		-ms-transition: none;
+		-o-transition: none;
+		transition: none;
+	}
 }
 
 #error_explanation {
