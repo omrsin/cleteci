@@ -33,10 +33,12 @@ es:
       postit1_html: Utilizamos prácticas de Desarrollo de <em class="soft">Soft</em><em class="ware">Ware</em> Ágil para la entrega de productos que maximizan el retorno de inversión en corto plazo, buscando la entrega continua de resultados.
       postit2_html: Nos tomamos en serio la agilidad .  Nuestro equipo cuenta con especialistas certificados como Scrum Master y Scrum Product Owner para desarrollo de <em class="soft">Soft</em><em class="ware">Ware</em> de clase mundial.
     technology:
-      title1: Teconología
+      title1: Tecnología
       title2: Agile Management Tools
       postit1: Evolucionamos con la Tecnología
       postit2: Nos reinventamos con tus necesidades
+      arrow1: Tú eliges la tecnología que quieres usar
+      arrow2: Prueba arrastrando alguno de los post-its a la región punteada
     contact:
       title: Contáctanos
     contact_form:

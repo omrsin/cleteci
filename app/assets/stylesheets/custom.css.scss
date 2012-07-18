@@ -262,6 +262,17 @@ ul.nav-footer {
 	}
 }
 
+.drop-box {
+	height: 135px;
+	width: 140px;
+	position: absolute;
+	border-style: dashed;
+	-webkit-border-radius: 20px 20px;
+	-moz-border-radius: 20px 20px;
+	border-radius: 20px 20px;
+	
+}
+
 .title h1 {
 	font-size: 40px;
 	margin-bottom: 18px;
@@ -477,12 +488,37 @@ ul.nav-footer {
 		.postit {
 			cursor: move;
 		}
+		.arrow-tech {
+			position: absolute;
+			width: 388px;
+			top: -14px;
+			left: 36%;
+			font-size: 25px;
+			p {
+				font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 23px;
+				text-align: center;
+				line-height: 25px;
+			}		
+			#arrow-msg1 {
+				width: 206px;
+				position: absolute;				
+				left: 10%;
+				top: 0px;
+			}
+			#arrow-msg2 {
+				width: 193px;
+				position: absolute;
+				left: 50%;
+				top: 61px;
+			}
+		}
 		.languages {
-			min-height: 350px;
+			min-height: 250px;
 			#tech-msg1 {
 				background: asset-url("cleteci-postit-blue-1.png",image) no-repeat;
-				top: -113px;
-				left: 350px;
+				top: 269px;
+				left: 859px;
 				p {
 					width: 70%;
 					top: 33px;
@@ -496,70 +532,91 @@ ul.nav-footer {
 			}			
 			#tech-msg2 {
 				background: asset-url("cleteci-postit-blue-2.png",image) no-repeat;
-				top: -40px;
-				left: 450px;
+				top: 328px;
+				left: 959px;
 			}
 			#html5 {
 				background: asset-url("cleteci-postit-html5.png",image) no-repeat;
-				left: 9%;
-				top: 120px;
+				left: 72%;
+				top: -60px;
+				z-index: 1;
 			}
 			#css3 {
 				background: asset-url("cleteci-postit-css3.png",image) no-repeat;
-				left: 17%;
-				top: 190px;
-				z-index: 2;
+				left: 4%;
+				top: 65px;
 			}
 			#rails {
 				background: asset-url("cleteci-postit-rails.png",image) no-repeat;
-				left: 26%;
+				left: 12%;
 				top: 100px;
+				z-index: 2;
 			}
 			#php {
 				background: asset-url("cleteci-postit-php.png",image) no-repeat;
-				left: 42%;
-				top: 190px;
+				left: 20%;
+				top: 59px;
+				
 			}
 			#java {
 				background: asset-url("cleteci-postit-java.png",image) no-repeat;
-				left: 57%;
+				left: 29%;
+				top: 91px;
+				z-index: 1;
 			}
 			#microsoft {
 				background: asset-url("cleteci-postit-microsoft.png",image) no-repeat;
-				left: 67%;
-				top: 190px;
+				left: 39%;
+				top: 83px;
 			}
 			#oracle {
 				background: asset-url("cleteci-postit-oracle.png",image) no-repeat;
-				top: -40px;
-				left: 75%;
+				top: 136px;
+				left: 47%;
+			}
+			#dashed-box-1 {
+				top: -70px;
+				left: 71%;
+			}
+			#dashed-box-2 {
+			  top: -70px;
+				left: 85%;
+			}
+			#dashed-box-3 {
+				top: 90px;
+				left: 71%;
+			}
+			#dashed-box-4 {
+				top: 90px;
+				left: 85%;
 			}
 		}
 		.agile-tools {
 			#jira {
 				background: asset-url("cleteci-postit-jira.png",image) no-repeat;
-				left: 7%;
-				top: 395px;
+				left: 3%;
+				top: 318px;
 			}
 			#versionone {
 				background: asset-url("cleteci-postit-versionone.png",image) no-repeat;
-				left: 23%;
-				top: 410px;
+				left: 13%;
+				top: 322px;
 			}
 			#pivotaltracker {
 				background: asset-url("cleteci-postit-pivotal.png",image) no-repeat;
-				left: 39%;
+				left: 23%;
+				top: 321px;
 			}
 			#greenhopper {
 				background: asset-url("cleteci-postit-green.png",image) no-repeat;
-				left: 55%;
-				top: 400px;
+				left: 34%;
+				top: 317px;
 			}
 			#redmine {
 				background: asset-url("cleteci-postit-redmine.png",image) no-repeat;
-				left: 75%;
-				top: 410px;
-			}
+				left: 44%;
+				top: 324px;
+			}			
 		}
 	}
 }
