@@ -4,7 +4,7 @@
 		<section class="container">
 			<div class="offset1">
 				<article class="span5">
-					<header>
+					<header class="title">
 						<h1><%= t ".title" %></h1>
 					</header>
 					<div class="article-content">
@@ -21,7 +21,7 @@
 				</article>
 			
 				<%= link_to("#") do %>
-					<article class="span3 content-portfolio">
+					<article class="span3 content-portfolio postit-intro">
 						<div>
 							<header>
 								<h1><%= t ".postit1" %></h1>
@@ -32,7 +32,7 @@
 				<% end %>
 				
 				<%= link_to("#nosotros", onclick: 'goTo("company")') do %>
-					<article class="span3 content-company">					
+					<article class="span3 content-company postit-intro">					
 						<div>
 							<header>
 								<h1><%= t ".postit2" %></h1>

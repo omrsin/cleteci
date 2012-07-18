@@ -244,15 +244,6 @@ ul.nav-footer {
 
 /* Home */
 
-/*.page-view {
-	height: 1050px;
-	padding-top: 64px;
-	h1 {
-		font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
-		font-weight: normal;
-	}
-}*/
-
 .postit {
 	height: 135px;
 	width: 140px;
@@ -269,6 +260,13 @@ ul.nav-footer {
 		font-weight: bold;
 		line-height: 20px;
 	}
+}
+
+.title h1 {
+	font-size: 40px;
+	margin-bottom: 18px;
+	font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
 }
 
 /* Intro */
@@ -292,13 +290,12 @@ ul.nav-footer {
 	section article {
 		margin-top: 60px;
 		margin-left: 20px;
-		h1 {
+		&.postit-intro h1{
 			font-size: 32px;
 			font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 			font-weight: normal;
 			color: $myDarkGray;
-			
-		}
+		}		
 	}
 	
 	.article-content {
