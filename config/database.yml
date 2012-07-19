@@ -1,0 +1,37 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost  
+  database: Cleteci_development
+  pool: 5
+  username: XXX
+  password: YYY
+  timeout: 5000
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  host: localhost 
+  database: Cleteci_test
+  pool: 5
+  username: XXX
+  password: YYY
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost 
+  database: Cleteci_porduction
+  pool: 5
+  username: XXX
+  password: YYY
+  timeout: 5000
