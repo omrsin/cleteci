@@ -402,6 +402,8 @@ ul.nav-footer {
 
 #company {
 	background-image: asset-url("fondo.jpg", image);
+	background-repeat: repeat-x;
+	background-color: #0092d0;
 	color: $white;
 	padding-top: 140px;
 	height: 980px;
@@ -416,29 +418,37 @@ ul.nav-footer {
 		}
 	}
 	.text-content {
-		margin-left: 50px;
+		margin-left: 50px;		
+		p {
+			font-size: 15px;
+			line-height: 24px;
+		}
 		em {
 			font-style: normal;
 			&.soft {
-				color: $myGreen;
+				color: $myOrange;
+				font-weight: bold;
+				font-size: 20px;
 			}
 		}
 	}
 	.second-row {
+		clear: both;
 		div {
 			height: 250px;
 			position: relative;
-			margin-top: 56px;
+			margin-top: 56px;			
 			p {
 				width: 179px;				
-				font-size: 16px;
-				line-height: 24px;
+				font-size: 19px;
+				line-height: 31px;
 				color: $black;
 				font-family: 'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 				em {
 					font-style: normal;
 					&.soft {
 						color: $white;
+						font-weight: bold;
 					}
 				}				
 			}
