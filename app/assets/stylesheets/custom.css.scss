@@ -82,6 +82,10 @@ li {
 	margin-top: 75px;
 }
 
+.centered {
+	text-align: center;
+}
+
 
 /* Header */
 
@@ -646,12 +650,15 @@ ul.nav-footer {
 		font-weight: normal;
 		color: $myOrange;
 	}
+	#appointment-form {
+		margin-left: 25px;
+	}
 	.postit {
 		position: relative;
 	}
 	#arrange {
 		background: asset-url("cleteci-postit-arrange.png",image) no-repeat;
-		margin-left: 40px;
+		margin-left: 25px;
 	}
 	.mail img {
 		padding-left: 10px;
@@ -687,7 +694,7 @@ input.submit-appointment {
 	font-family:'ThrowMyHandsUpintheAirRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 25px;
 	margin-top: 25px;
-	margin-left: 30px;
+	margin-right: 70px;
 	width: 188px;
 	background: asset-url('cleteci-send-sprite.png', image) no-repeat;
 	height: 52px;

@@ -3,52 +3,83 @@
 
 	<%= render 'shared/error_messages', object: f.object %>
 	
-	<div class="span3">
-		<%= fields_for :contact, @appointment.contact do |contact_f| %>
-			<%= contact_f.label :name %>
-			<%= contact_f.text_field :name %>
-
-			<%= contact_f.label :lastname %>
-			<%= contact_f.text_field :lastname %>
-
-			<%= contact_f.label :email %>
-			<%= contact_f.text_field :email %>
-
-			<%= contact_f.label :skypeid %>
-			<%= contact_f.text_field :skypeid %>
-
-			<%= contact_f.label :phone %>
-			<%= contact_f.text_field :phone %>
-
-			<%= contact_f.label :wish_info, class: "floating-left-label" %>
-			<%= contact_f.check_box :wish_info, checked: true  %>
-		<% end %>
-	</div>
 	<div class="span1">
 		<div class="postit" id="arrange"></div>
-	</div> 
-	<div class="span6">
+	</div>	
+	<div class="span5">
 		<div class="offset1">
-			<%= f.label :topic %>
-			<%= f.text_area :topic %> 
-			
-			<%= f.label :date %>
-			<%= f.text_field :date %>
-		  
-			<%= f.label :time %>
-			<%= f.select :time, options_for_select([[t(".select1")], 
-																							[t(".select2")],
-																							[t(".select3")],
-																							[t(".select4")]]) %>
+			<%= fields_for :contact, @appointment.contact do |contact_f| %>
+				<%= contact_f.label :name %>
+				<%= contact_f.text_field :name %>
 
-			<div style="width: 100%;">
-				<%= f.label :via, class: "floating-left-label" %>
-				<%= f.radio_button :via, "Correo", checked: true %>  <%= t ".radio1" %>
-				<%= f.radio_button :via, "Skype" %>  <%= t ".radio2" %>
-				<%= f.radio_button :via, "Teléfono" %>  <%= t ".radio3" %>
-			</div>
+				<%= contact_f.label :lastname %>
+				<%= contact_f.text_field :lastname %>
 
-			<%= f.submit t(".submit"), class: "btn btn-large btn-primary submit-appointment" %>				
+				<%= contact_f.label :email %>
+				<%= contact_f.text_field :email %>
+
+				<%= contact_f.label :skypeid %>
+				<%= contact_f.text_field :skypeid %>
+
+				<%= contact_f.label :phone %>
+				<%= contact_f.text_field :phone %>
+
+				<%= contact_f.label :wish_info, class: "floating-left-label" %>
+				<%= contact_f.check_box :wish_info, checked: true  %>
+			<% end %>
 		</div>
+	</div>	 
+	<div id="appointment-form" class="span4">
+		<%= f.label :topic %>
+		<%= f.text_area :topic %> 
+		
+		<%= f.label :date %>
+		<%= f.text_field :date %>
+	  
+		<%= f.label :time %>
+		<%= f.select :time, options_for_select([[t(".select1")], 
+																						[t(".select2")],
+																						[t(".select3")],
+																						[t(".select4")]]) %>
+
+		<div style="width: 100%;">
+			<%= f.label :via, class: "floating-left-label" %>
+			<%= f.radio_button :via, "Correo", checked: true %>  <%= t ".radio1" %>
+			<%= f.radio_button :via, "Skype" %>  <%= t ".radio2" %>
+			<%= f.radio_button :via, "Teléfono" %>  <%= t ".radio3" %>
+		</div>
+				
+	</div>
+	<div class="span2 footer-contact">
+		<div class="contact-content phone">
+			<div class="child-left">
+				<%= image_tag("cleteci-phone.png", alt: "Contacto") %>
+			</div>			
+			<div class="child-right">
+				<p>0412-271-1019</p>
+				<p>0412-281-3473</p>
+				<p>0412-990-7216</p>
+			</div>
+		</div>
+		<div class="clear-content mail">
+			<div class="child-left">
+				<%= image_tag("cleteci-mail.png", alt: "Correo") %>
+			</div>			
+			<div class="child-right">
+				<%= link_to("hola@cleteci.com", "mailto:hola@cleteci.com") %>
+			</div>
+		</div>
+		<!--
+		<div class="legal">
+			<div>
+				<p>Todos los derechos reservados</p>
+				<p>CLETECI, C.A.</p>
+				<p>Rif: J-400571464</p>
+			</div>
+		</div>
+		-->
+	</div>
+	<div class="span12 centered">
+		<%= f.submit t(".submit"), class: "btn btn-large btn-primary submit-appointment" %>
 	</div>
 <% end %>
