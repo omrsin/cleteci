@@ -459,7 +459,21 @@ ul.nav-footer {
 			}
 		}
 		.weareagile {
-			background: asset-url("cleteci-weareagile.png",image) no-repeat 55px 20px;
+			position: relative;
+			background: asset-url("cleteci-circle.png",image) no-repeat 55px 20px;
+			p {
+				font-size: 53px;
+				color: white;
+				line-height: 60px;
+				left: 83px;
+				position: absolute;
+				top: 47px;
+				transform:rotate(-10deg);
+				-ms-transform:rotate(-10deg);
+				-moz-transform:rotate(-10deg);
+				-webkit-transform:rotate(-10deg);
+				-o-transform:rotate(-10deg);
+			}
 		}
 		.postit1 {
 			background: asset-url("cleteci-postit-orange-1.png",image) no-repeat;
@@ -665,6 +679,18 @@ ul.nav-footer {
 	#arrange {
 		background: asset-url("cleteci-postit-arrange.png",image) no-repeat;
 		margin-left: 25px;
+		p {
+			width: 104px;
+			color: $myDarkGray;
+			font-size: 26px;
+			font-weight: normal;
+			line-height: 32px;			
+			transform:rotate(-2deg);
+			-ms-transform:rotate(-2deg);
+			-moz-transform:rotate(-2deg);
+			-webkit-transform:rotate(-2deg);
+			-o-transform:rotate(-2deg);			
+		}
 	}
 	.mail img {
 		padding-left: 10px;

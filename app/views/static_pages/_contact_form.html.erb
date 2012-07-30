@@ -4,7 +4,9 @@
 	<%= render 'shared/error_messages', object: f.object %>
 	
 	<div class="span2">
-		<div class="postit" id="arrange"></div>
+		<div class="postit" id="arrange">
+			<p><%= t ".postit1" %></p>
+		</div>
 	</div>	
 	<div id="contact-form" class="span3">	
 		<%= fields_for :contact, @appointment.contact do |contact_f| %>

@@ -32,6 +32,7 @@ es:
       parragraph2_html: Tenemos experiencia desarrollando <em class="soft">Soft</em><em class="ware">Ware</em> para grandes y pequeñas empresas, en grandes y pequeños proyectos. Además nos emociona trabajar en emprendimientos Web 2.0 empleando arquitecturas innovadoras basadas en Software as a Service y Cloud Computing.
       postit1_html: Utilizamos prácticas de Desarrollo de <em class="soft">Soft</em><em class="ware">Ware</em> Ágil para la entrega de productos que maximizan el retorno de inversión.
       postit2_html: Nuestro equipo cuenta con especialistas certificados como Scrum Master y Scrum Product Owner.
+      weareagile: Somos Agiles!
     technology:
       title1: Tecnología
       title2: Agile Management Tools
@@ -42,6 +43,7 @@ es:
     contact:
       title: Contáctanos
     contact_form:
+      postit1: Cuadremos una reunión
       radio1: Correo
       radio2: Skype
       radio3: Teléfono
