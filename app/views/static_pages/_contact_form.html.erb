@@ -3,33 +3,31 @@
 
 	<%= render 'shared/error_messages', object: f.object %>
 	
-	<div class="span1">
+	<div class="span2">
 		<div class="postit" id="arrange"></div>
 	</div>	
-	<div class="span5">
-		<div class="offset1">
-			<%= fields_for :contact, @appointment.contact do |contact_f| %>
-				<%= contact_f.label :name %>
-				<%= contact_f.text_field :name %>
+	<div id="contact-form" class="span3">	
+		<%= fields_for :contact, @appointment.contact do |contact_f| %>
+			<%= contact_f.label :name %>
+			<%= contact_f.text_field :name %>
 
-				<%= contact_f.label :lastname %>
-				<%= contact_f.text_field :lastname %>
+			<%= contact_f.label :lastname %>
+			<%= contact_f.text_field :lastname %>
 
-				<%= contact_f.label :email %>
-				<%= contact_f.text_field :email %>
+			<%= contact_f.label :email %>
+			<%= contact_f.text_field :email %>
 
-				<%= contact_f.label :skypeid %>
-				<%= contact_f.text_field :skypeid %>
+			<%= contact_f.label :skypeid %>
+			<%= contact_f.text_field :skypeid %>
 
-				<%= contact_f.label :phone %>
-				<%= contact_f.text_field :phone %>
+			<%= contact_f.label :phone %>
+			<%= contact_f.text_field :phone %>
 
-				<%= contact_f.label :wish_info, class: "floating-left-label" %>
-				<%= contact_f.check_box :wish_info, checked: true  %>
-			<% end %>
-		</div>
+			<%= contact_f.label :wish_info, class: "floating-left-label" %>
+			<%= contact_f.check_box :wish_info, checked: true  %>
+		<% end %>
 	</div>	 
-	<div id="appointment-form" class="span4">
+	<div id="appointment-form" class="span3">
 		<%= f.label :topic %>
 		<%= f.text_area :topic %> 
 		
@@ -50,7 +48,7 @@
 		</div>
 				
 	</div>
-	<div class="span2 footer-contact">
+	<div class="span3 footer-contact">
 		<div class="contact-content phone">
 			<div class="child-left">
 				<%= image_tag("cleteci-phone.png", alt: "Contacto") %>
@@ -69,15 +67,15 @@
 				<%= link_to("hola@cleteci.com", "mailto:hola@cleteci.com") %>
 			</div>
 		</div>
-		<!--
-		<div class="legal">
-			<div>
-				<p>Todos los derechos reservados</p>
-				<p>CLETECI, C.A.</p>
-				<p>Rif: J-400571464</p>
+		
+		<div id="legal" class="clear-content">
+			<div id="legal-inner">
+				<p><%= t ".legal1" %></p>
+				<p><strong><%= t ".legal2" %></strong></p>
+				<p><%= t ".legal3" %></p>
 			</div>
 		</div>
-		-->
+		
 	</div>
 	<div class="span12 centered">
 		<%= f.submit t(".submit"), class: "btn btn-large btn-primary submit-appointment" %>
